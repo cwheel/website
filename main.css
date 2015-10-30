@@ -13,10 +13,11 @@ body {
 	-webkit-transition: all .35s cubic-bezier(0, 1.1, 0.2, 1.1);
 	-webkit-box-shadow: -17px -9px 26px -16px rgba(0,0,0,0.75);
 	-webkit-backface-visibility: hidden;
+	background: #666;
 }
 
 .content-show-nav {
-	-webkit-transform: translate3d(0,40%,0) scale3d(.85,.85,1);
+	-webkit-transform: translate3d(0,10%,0) scale3d(.85,.85,1);
 	-webkit-filter: brightness(0.7);
 }
 
@@ -168,16 +169,6 @@ body {
 	font-size: 2.2vw;
 }
 
-#deskCoffee {
-	background: url("/Users/cameron/Desktop/cupShadowed.png");
-	-webkit-background-size: cover;
-	position: absolute;
-	top: -175px;
-	right: 20px;
-	width: 330px;
-	height: 310px;
-}
-
 .nav-bar-hidden {
 	-webkit-transform: scale3d(0,0,1);
 }
@@ -189,7 +180,7 @@ body {
 .nav-bar-item {
 	text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 	color: #FFF;
-	font-size: 1.8vw;
+	font-size: 1.5vw;
 	opacity: 0.65;
 	-webkit-transition: all .35s cubic-bezier(0, 1.1, 0.2, 1.1);
 	cursor: pointer;
@@ -249,6 +240,6 @@ body {
 @media screen and (min-height: 601px) {
 	.nav-bar {
 		position: relative;
-		top: 20%;
+		top: 75px;
 	}
 }
