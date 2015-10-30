@@ -1,23 +1,37 @@
-var app = angular.module('app', ['ngRoute', 'ngAnimate']);
+var app = angular.module('app', ['anim-in-out', 'ui.router', 'ngAnimate']);
 
-app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
-	$routeProvider
-		.when('/', {
-			templateUrl : 'routes/home.html',
+app.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.otherwise("/");
+
+	$stateProvider
+		.state('/', {
+			url: '/',
+			templateUrl : 'views/home.html',
 			controller  : 'homeController'
 		})
-		.when('/about', {
-			templateUrl : 'routes/about.html',
+		.state('/about', {
+			url: '/about',
+			templateUrl : 'views/about.html',
 			controller  : 'aboutController'
 		})
-		.when('/projects', {
-			templateUrl : 'routes/projects.html',
+		.state('/projects', {
+			url: '/projects',
+			templateUrl : 'views/projects.html',
 			controller  : 'projectsController'
 		})
-		.when('/exploration', {
-			templateUrl : 'routes/exploration.html',
+		.state('/projects.all', {
+			url: '/all',
+			templateUrl : 'views/projects/all.html',
+			controller  : 'projectsController'
+		})
+		.state('/projects.detail', {
+			url: '/detail',
+			templateUrl : 'views/projects/detail.html',
+			controller  : 'projectsController'
+		})
+		.state('/exploration', {
+			url: '/exploration',
+			templateUrl : 'views/exploration.html',
 			controller  : 'projectsController'
 		});
-		
-		//$locationProvider.html5Mode(true);
 }]);

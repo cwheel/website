@@ -6,7 +6,9 @@
     "angular" : "1.3.x",
     "angular-route" : "1.3.x",
     "angular-animate" : "1.3.x",
-    "bootstrap" : "latest"
+    "bootstrap" : "latest",
+    "angular-ui-router" : "latest",
+    "angular-ui-router-anim-in-out" : "latest"
   },
   "private": true
 }

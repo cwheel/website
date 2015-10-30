@@ -1,12 +1,5 @@
-app.controller('mainController',['$scope', '$location', '$timeout', function($scope, $location, $timeout) {
+app.controller('mainController',['$scope', '$state', '$timeout', function($scope, $state, $timeout) {
 	$scope.shouldResume = false;
-	/*$(window).resize(function(){
-    	$(".nav-bar").css('top', ($("#content").offset().top/2) - $(".nav-bar").height());
-	});
-
-	$scope.$watch('showNav', function () {
-		$(".nav-bar").css('top', ($("#content").offset().top/2) - $(".nav-bar").height());
-	});*/
 
 	$scope.resumeClick = function() {
 		console.log($scope.shouldResume);
@@ -20,7 +13,7 @@ app.controller('mainController',['$scope', '$location', '$timeout', function($sc
 				$scope.showNav = false;
 		}, 100);
 		
-		$location.path("/" + route);
+		$state.go("/" + route);
 	};
 
 	$scope.$watch('showNav', function () {

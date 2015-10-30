@@ -1,0 +1,35 @@
+.project-tile {
+	background-image: url("res/test-thumb.jpg");
+	background-size: cover;
+	width: 90%;
+	height: 200px;
+	margin: 0 auto;
+	transition: all .45s cubic-bezier(0, 1.1, 0.5, 1.1);
+}
+
+.project-tile:hover {
+	cursor: pointer;
+	transform: scale3d(1.1,1.1,1);
+}
+
+.project-tile-left {
+	@extend .project-tile;
+	float: left;
+	margin-left: 0;
+}
+
+.project-tile-right {
+	@extend .project-tile;
+	float: right;
+	margin-right: 0;
+}
+
+.project-title {
+	@extend .page-title;
+	float: left;
+}
+
+.project-container {
+	width: 90%;
+	margin: 0 auto;
+}
