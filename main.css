@@ -32,7 +32,7 @@ body {
 	-webkit-perspective:1000px;
 	-webkit-background-size: cover;
 	-webkit-backface-visibility: hidden;
-	background-image: url("file:///Users/cameron/Downloads/Merisier-Select-Meilleur.jpg");
+	background-image: url("res/wood.jpg");
 }
 
 #homeCenter {
@@ -77,8 +77,66 @@ body {
 #home-container {
 	width: 100%;
 	height: 100%;
-	background-image: url("file:///Users/cameron/Downloads/jKq6Vy0.jpg");
+	background-image: url("res/teton.jpg");
 	-webkit-background-size: cover;
+}
+
+#clouds {
+	background-image: url("res/clouds.png");
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	opacity: 0.02;
+	position: absolute;
+	margin-top: 5%;
+	animation: cloudsAnimation 60s linear infinite;
+}
+
+#clouds2 {
+	background-image: url("res/clouds.png");
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	opacity: 0.02;
+	position: absolute;
+	margin-top: 5%;
+	animation: cloudsAnimation 80s linear infinite;
+}
+
+#cloudsFirst {
+	background-image: url("res/clouds.png");
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	opacity: 0.02;
+	position: absolute;
+	margin-top: 5%;
+	animation: cloudsAnimationFirst 60s linear;
+	animation-fill-mode: forwards;
+}
+
+@keyframes cloudsAnimation {
+    0% {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+}
+
+@keyframes cloudsAnimationFirst {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
 }
 
 .page-container {
