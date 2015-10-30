@@ -1,0 +1,143 @@
+body {
+	overflow-y: hidden;
+}
+
+#content {
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: all .35s cubic-bezier(0, 1.1, 0.2, 1.1);
+	box-shadow: -17px -9px 26px -16px rgba(0,0,0,0.75);
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	background: #666;
+	overflow-x: hidden;
+	backface-visibility: hidden;
+	perspective: 1000;
+}
+
+#stage {
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-perspective:1000px;
+	-webkit-background-size: cover;
+	-webkit-backface-visibility: hidden;
+	background-image: url("res/wood.jpg");
+}
+
+#homeCenter {
+	top: 40%;
+	text-align: center;
+	position: relative;
+	color: white;
+}
+
+#tagline {
+	font-size: 12px;
+	opacity: 0.9;
+}
+
+#homeFirst {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+#homeLast {
+	font-size: 30px;
+}
+
+#contact-bar {
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+	color: white;
+	opacity: 0.9;
+	font-size: 11px;
+}
+
+#bars {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	color: white;
+	font-size: 22px;
+	cursor: pointer;
+}
+
+#home-container {
+	width: 100%;
+	height: 100%;
+	background-image: url("res/teton.jpg");
+	background-size: cover;
+}
+
+#clouds-layer-1 {
+	background-image: url("res/clouds.png");
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	opacity: 0.02;
+	position: absolute;
+	margin-top: 5%;
+	-webkit-animation: cloudsAnimation 60s linear infinite;
+	        animation: cloudsAnimation 60s linear infinite;
+}
+
+#clouds-layer-2 {
+	background-image: url("res/clouds.png");
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	opacity: 0.02;
+	position: absolute;
+	margin-top: 5%;
+	-webkit-animation: cloudsAnimation 80s linear infinite;
+	        animation: cloudsAnimation 80s linear infinite;
+}
+
+#clouds-layer-0 {
+	background-image: url("res/clouds.png");
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	opacity: 0.02;
+	position: absolute;
+	margin-top: 5%;
+	-webkit-animation: cloudsAnimationFirst 60s linear;
+	        animation: cloudsAnimationFirst 60s linear;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+
+#name {
+	top: 5px;
+	left: 10px;
+	position: absolute;
+}
+
+#lastName {
+	color: white;
+	opacity: 0.6;
+	font-family: 'Averia Sans Libre', cursive;
+	font-weight: 300;
+	font-size: 2.2vw;
+}
+
+#firstName {
+	color: white;
+	opacity: 0.6;
+	font-family: 'Averia Sans Libre', cursive;
+	font-weight: 700;
+	font-size: 2.2vw;
+}
+

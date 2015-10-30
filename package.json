@@ -1,0 +1,16 @@
+ {
+  "name": "website",
+  "main": "server.js",
+
+  "dependencies": {
+    "express": "latest",
+    "gulp": "latest",
+    "gulp-sass": "latest",
+    "gulp-livereload": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-autoprefixer": "latest",
+    "connect-livereload": "latest",
+    "gulp-webserver": "latest",
+    "gulp-concat": "latest"
+  }
+}

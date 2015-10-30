@@ -1,0 +1,80 @@
+#home-center {
+	top: 40%;
+	text-align: center;
+	position: relative;
+	color: white;
+}
+
+#tagline {
+	font-size: 12px;
+	opacity: 0.9;
+}
+
+#home-first {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+#home-last {
+	font-size: 30px;
+}
+
+#contact-bar {
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+	color: white;
+	opacity: 0.9;
+	font-size: 11px;
+}
+
+#home-container {
+	width: 100%;
+	height: 100%;
+	background-image: url("res/teton.jpg");
+	background-size: cover;
+}
+
+#clouds-layer-1 {
+	background-image: url("res/clouds.png");
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	opacity: 0.02;
+	position: absolute;
+	margin-top: 5%;
+	animation: cloud-drift 90s linear infinite;
+}
+
+#clouds-layer-2 {
+	@extend #clouds-layer-1;
+	animation-duration: 100s;
+}
+
+#clouds-layer-base {
+	@extend #clouds-layer-1;
+	animation: cloud-drift-once 100s linear infinite;
+	animation-fill-mode: forwards;
+}
+
+#name {
+	top: 5px;
+	left: 10px;
+	position: absolute;
+}
+
+#lastName {
+	color: white;
+	opacity: 0.6;
+	font-family: 'Averia Sans Libre', cursive;
+	font-weight: 300;
+	font-size: 2.2vw;
+}
+
+#firstName {
+	color: white;
+	opacity: 0.6;
+	font-family: 'Averia Sans Libre', cursive;
+	font-weight: 700;
+	font-size: 2.2vw;
+}

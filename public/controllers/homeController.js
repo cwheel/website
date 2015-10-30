@@ -1,5 +1,6 @@
 app.controller('homeController',['$scope', '$location', '$timeout', function($scope, $location, $timeout) {
-	/*$timeout(function () {
+	//Temporary fix for Safari
+	$timeout(function () {
 		var csf = $("#cloudFirst").clone();
 		var cs = $("#clouds").clone();
 		var cs2 = $("#clouds2").clone();
@@ -11,6 +12,6 @@ app.controller('homeController',['$scope', '$location', '$timeout', function($sc
 		$("#home-container").prepend(csf);
 		$("#home-container").prepend(cs);
 		$("#home-container").prepend(cs2);
-	}, 250);/
+	}, 250);
 	
 }]);
