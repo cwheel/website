@@ -38,9 +38,8 @@
 #clouds-layer-1 {
 	background-image: url("res/clouds.png");
 	width: 100%;
-	height: 400px;
+	height: 450px;
 	background-size: cover;
-	opacity: 0.02;
 	position: absolute;
 	margin-top: 5%;
 	animation: cloud-drift 90s linear infinite;
@@ -48,7 +47,16 @@
 
 #clouds-layer-2 {
 	@extend #clouds-layer-1;
+	transform:  translate3d(100%, 0, 0);
+	animation-delay: 30s;
 	animation-duration: 100s;
+}
+
+#clouds-layer-3 {
+	@extend #clouds-layer-1;
+	transform:  translate3d(100%, 0, 0);
+	margin-top: 15%;
+	animation-duration: 110s;
 }
 
 #clouds-layer-base {

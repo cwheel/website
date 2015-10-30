@@ -10,7 +10,7 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	transition: all .35s cubic-bezier(0, 1.1, 0.2, 1.1);
+	transition: all .45s cubic-bezier(0, 1.1, 0.5, 1.1);
 	box-shadow: -17px -9px 26px -16px rgba(0,0,0,0.75);
 	backface-visibility: hidden;
 	background: #666;
@@ -32,6 +32,7 @@ body {
 	background-size: cover;
 	backface-visibility: hidden;
 	background-image: url("res/wood.jpg");
+	transform: translate3d(0, 0, 0);
 }
 
 #bars {
