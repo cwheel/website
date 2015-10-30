@@ -1,0 +1,84 @@
+<html ng-app="app">
+	<head>
+		<!-- Angular -->
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
+
+		<!-- jQuery -->
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+		<!-- Portfolio -->
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script src="app.js"></script>
+
+		<script src="controllers/mainController.js"></script>
+		<script src="controllers/homeController.js"></script>
+		<script src="controllers/aboutController.js"></script>
+		<script src="controllers/explorationController.js"></script>
+		<script src="controllers/projectsController.js"></script>
+
+		<!-- Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Averia+Sans+Libre:300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+		<title>Cameron Wheeler</title>
+	</head>
+
+	<body ng-controller="mainController">	
+		<div id="stage">	
+			<div id="name">
+				<span id="firstName">Cameron</span>
+				<span id="lastName">Wheeler</span>
+				</div>
+			</div>
+
+			<div id="deskCoffee" ng-class='{"desk-coffee-slide":showNav}'></div>
+
+			<div class="container nav-bar">
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-2">
+						<div class="nav-bar-item" ng-click="switchRoutes('')" ng-class='{"nav-bar-hidden":!showNav}'>
+							<i class="fa fa-home"></i>
+							Home
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="nav-bar-item" ng-click="switchRoutes('projects')" ng-class='{"nav-bar-hidden":!showNav}'>
+							<i class="fa fa-pencil"></i>
+							Projects
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="nav-bar-item" ng-click="switchRoutes('exploration')" ng-class='{"nav-bar-hidden":!showNav}'>
+							<i class="fa fa-tree"></i>
+							Exploration
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="nav-bar-item" ng-click="switchRoutes('about')" ng-class='{"nav-bar-hidden":!showNav}'>
+							<i class="fa fa-phone"></i>
+							About
+						</div>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+			</div>
+
+			<div id="content" ng-class='{"content-show-nav":showNav}' ng-click="resumeClick()">
+				<div id="bars" ng-click="showNav=!showNav">
+					<i class="fa fa-bars"></i>
+				</div>
+
+				<div class="page" ng-view=""></div>
+			</div>
+		</div>
+	</body>
+</html>
