@@ -35,33 +35,38 @@
 	background-size: cover;
 }
 
-#clouds-layer-1 {
+.cloud {
 	background-image: url("res/clouds.png");
 	width: 100%;
 	height: 450px;
 	background-size: cover;
 	position: absolute;
 	margin-top: 5%;
-	animation: cloud-drift 90s linear infinite;
+	opacity: 0.03;
+}
+
+#clouds-layer-1 {
+	@extend .cloud;
+	animation: cloud-drift 100s linear infinite;
 }
 
 #clouds-layer-2 {
-	@extend #clouds-layer-1;
-	transform:  translate3d(100%, 0, 0);
+	@extend .cloud;
+	transform: translate3d(100%, 0, 0);
 	animation-delay: 30s;
-	animation-duration: 100s;
+	animation-duration: 120s;
 }
 
 #clouds-layer-3 {
-	@extend #clouds-layer-1;
+	@extend .cloud;
 	transform:  translate3d(100%, 0, 0);
 	margin-top: 15%;
-	animation-duration: 110s;
+	animation-duration: 140s;
 }
 
 #clouds-layer-base {
 	@extend #clouds-layer-1;
-	animation: cloud-drift-once 100s linear infinite;
+	animation: cloud-drift-once 135s linear infinite;
 	animation-fill-mode: forwards;
 }
 
