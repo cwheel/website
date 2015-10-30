@@ -13,7 +13,7 @@ app.controller('mainController',['$scope', '$state', '$timeout', function($scope
 				$scope.showNav = false;
 		}, 100);
 		
-		$state.go("/" + route);
+		$state.go(route);
 	};
 
 	$scope.$watch('showNav', function () {

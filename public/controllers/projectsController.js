@@ -1,3 +1,3 @@
-app.controller('projectsController',['$scope', '$location', function($scope, $location) {
-
+app.controller('projectsController',['$scope', '$state', function($scope, $state) {
+	$state.go("projects.all");
 }]);
