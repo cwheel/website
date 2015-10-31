@@ -1,3 +1,5 @@
-app.controller('detailController',['$scope', '$location', function($scope, $location) {
-
+app.controller('detailController',['$scope', '$state', function($scope, $state) {
+	$scope.back = function() {
+		$state.go("projects.all");
+	}
 }]);

@@ -1,11 +1,11 @@
 {
 	"projects" : [
-		{"title" : "Familee", "banner" : "/res/test-thumb.jpeg"},
-		{"title" : "Familee", "banner" : "/res/test-thumb.jpeg"},
-		{"title" : "Familee", "banner" : "/res/test-thumb.jpeg"},
-		{"title" : "Familee", "banner" : "/res/test-thumb.jpeg"},
-		{"title" : "Familee", "banner" : "/res/test-thumb.jpeg"},
-		{"title" : "Familee", "banner" : "/res/test-thumb.jpeg"},
-		{"title" : "Familee", "banner" : "/res/test-thumb.jpeg"}
+		{"title" : "Familee", "banner" : "/res/test-thumb.jpg"},
+		{"title" : "Familee", "banner" : "/res/test-thumb.jpg"},
+		{"title" : "Familee", "banner" : "/res/test-thumb.jpg"},
+		{"title" : "Familee", "banner" : "/res/test-thumb.jpg"},
+		{"title" : "Familee", "banner" : "/res/test-thumb.jpg"},
+		{"title" : "Familee", "banner" : "/res/test-thumb.jpg"},
+		{"title" : "Familee", "banner" : "/res/test-thumb.jpg"}
 	]
 }

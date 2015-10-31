@@ -36,3 +36,11 @@ app.config(['$stateProvider','$urlRouterProvider', '$locationProvider', function
 			controller  : 'projectsController'
 		});
 }]);
+
+app.directive('background', function(){
+    return function(scope, element, attrs){
+        element.css({
+            'background-image': 'url(' + attrs.background +')'
+        });
+    };
+});
