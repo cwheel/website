@@ -40,31 +40,28 @@
 			<div id="name">
 				<span id="firstName">Cameron</span>
 				<span id="lastName">Wheeler</span>
-				</div>
 			</div>
-
-			<div id="deskCoffee" ng-class='{"desk-coffee-slide":showNav}'></div>
 
 			<div class="container nav-bar">
 				<div class="row">
 					<div class="col-md-2"></div>
 					<div class="col-md-2">
-						<div class="nav-bar-item" ng-click="switchRoutes('')" ng-class='{"nav-bar-hidden":!showNav}'>
+						<div class="nav-bar-item" ng-click="switchViews('home')" ng-class='{"nav-bar-hidden":!showNav}'>
 							Home
 						</div>
 					</div>
 					<div class="col-md-2">
-						<div class="nav-bar-item" ng-click="switchRoutes('projects')" ng-class='{"nav-bar-hidden":!showNav}'>
+						<div class="nav-bar-item" ng-click="switchViews('projects')" ng-class='{"nav-bar-hidden":!showNav}'>
 							Projects
 						</div>
 					</div>
 					<div class="col-md-2">
-						<div class="nav-bar-item" ng-click="switchRoutes('exploration')" ng-class='{"nav-bar-hidden":!showNav}'>
+						<div class="nav-bar-item" ng-click="switchViews('exploration')" ng-class='{"nav-bar-hidden":!showNav}'>
 							Exploration
 						</div>
 					</div>
 					<div class="col-md-2">
-						<div class="nav-bar-item" ng-click="switchRoutes('about')" ng-class='{"nav-bar-hidden":!showNav}'>
+						<div class="nav-bar-item" ng-click="switchViews('about')" ng-class='{"nav-bar-hidden":!showNav}'>
 							About
 						</div>
 					</div>
@@ -80,5 +77,7 @@
 				<div class="page" ui-view></div>
 			</div>
 		</div>
+
+		<div id="stage-darken"></div>
 	</body>
 </html>

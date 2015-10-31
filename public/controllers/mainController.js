@@ -8,9 +8,9 @@ app.controller('mainController',['$scope', '$state', '$timeout', function($scope
 		}
 	};
 
-	$scope.switchRoutes = function(route) {
+	$scope.switchViews = function(route) {
 		$timeout(function() {
-				$scope.showNav = false;
+			$scope.showNav = false;
 		}, 100);
 		
 		$state.go(route);

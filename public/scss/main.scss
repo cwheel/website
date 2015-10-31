@@ -17,6 +17,7 @@ body {
 	overflow-x: hidden;
 	backface-visibility: hidden;
 	perspective: 1000;
+	z-index: 10;
 }
 
 #stage {
@@ -31,8 +32,20 @@ body {
 	perspective:1000px;
 	background-size: cover;
 	backface-visibility: hidden;
-	background-image: url("res/wood.jpg");
+	background-image: url("res/wood2.jpg");
 	transform: translate3d(0, 0, 0);
+	z-index: 0;
+}
+
+#stage:before {
+	content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+	background: radial-gradient(ellipse at center, transparent 55%, #000 100%, #000 100%)
 }
 
 #bars {
@@ -42,12 +55,26 @@ body {
 	color: white;
 	font-size: 22px;
 	cursor: pointer;
+	z-index: 100;
 }
 
 .page-title {
 	color: #FFF;
 	font-size: 30px;
 	font-weight: 700;
+}
+
+.page-container {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 10;
 }
 
 .page-row {
