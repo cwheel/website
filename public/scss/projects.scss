@@ -6,6 +6,7 @@
 	transition: all .45s cubic-bezier(0, 1.1, 0.5, 1.1);
 	margin-bottom: 60px;
 	box-shadow: -17px -9px 26px -16px rgba(0,0,0,0.3);
+	background-position: center;
 }
 
 .project-tile-spacing {
@@ -86,11 +87,53 @@
 	margin-left: 10px;
 }
 
+.project-image {
+	width: 75%;
+	height: 225px;
+	background: #fff;
+	box-shadow: -17px -9px 26px -16px rgba(0,0,0,0.3);
+	background-image: url("res/wood.jpg");
+	border: solid 3px white;
+	background-size: cover;
+	transition: all .45s cubic-bezier(0, 1.1, 0.5, 1.1);
+	margin-bottom: 60px !important;
+}
+
+.project-image-center {
+	@extend .project-image;
+
+	margin: 0 auto 40px;
+}
+
+.project-image-right {
+	@extend .project-image;
+
+	float: right;
+}
+
+.project-image:hover {
+	cursor: pointer;
+	transform: scale3d(1.1,1.1,1);
+}
+
 @media screen and (max-width:990px){
 
 	#project-tagline {
 		margin-left: 55px;
 		font-size: 16px;
+	}
+
+	.project-image {
+		margin: 0 auto;
+	}
+
+	.project-image-right {
+		margin: 0 auto;
+		float: none;
+	}
+
+	.project-tile {
+		height: 450px;
 	}
 }
 

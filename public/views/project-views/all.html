@@ -12,7 +12,7 @@
 
 	<div class="page-content">
 		<div ng-repeat="projectRow in projects" class="row page-row">
-			<div ng-repeat="project in projectRow" class="col-md-3">
+			<div ng-repeat="project in projectRow" class="col-md-{{12/itemsPerRow}}">
 					<div class="project-tile" ng-click="projectSelected()" background="{{project.banner}}"></div>
 			</div>
 		</div>
