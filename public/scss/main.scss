@@ -51,10 +51,9 @@ body {
 
 #bars {
 	position: absolute;
-	top: 15px;
-	right: 15px;
+	top: 25px;
+	right: 25px;
 	color: white;
-	font-size: 22px;
 	cursor: pointer;
 	z-index: 100;
 }
@@ -91,4 +90,28 @@ body {
 
 .page-content {
 	margin-top: 50px;
+}
+
+//Scale the menu button
+@media screen and (max-width:990px){
+	#bars {
+		font-size: 50px;
+	}
+}
+
+@media screen and (min-width:991px){
+	#bars {
+		font-size: 25px;
+	}
+}
+
+//Repair Font-Awesome 0-width issue on smaller screens
+@media screen and (max-width:990px){
+	.fa-icon {
+		width: 30px;
+	}
+}
+
+@media screen and (min-width:991px){
+	.fa-icon {}	
 }
