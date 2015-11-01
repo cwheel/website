@@ -52,6 +52,7 @@
   opacity: 0;
 }
 
+//Navbar position
 @media screen and (max-height: 300px) {
 	.nav-bar {
 		position: relative;
@@ -78,5 +79,18 @@
 	.nav-bar {
 		position: relative;
 		top: 75px;
+	}
+}
+
+//Navbar font size
+@media screen and (max-width:990px) {
+	.nav-bar-item {
+		font-size: 3vw;
+	}
+}
+
+@media screen and (min-width:991px) {
+	.nav-bar-item {
+		font-size: 1.2vw;
 	}
 }
