@@ -76,10 +76,6 @@
 	color: #FFF;
 }
 
-.project-desc-container {
-	margin-left: 30px;
-}
-
 .project-detail {
 	font-weight: 300;
 	margin-bottom: 30px;
@@ -88,4 +84,20 @@
 
 .project-subtitle-value {
 	margin-left: 10px;
+}
+
+@media screen and (max-width:990px){
+
+	#project-tagline {
+		margin-left: 55px;
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width:991px){
+
+	#project-tagline {
+		margin-left: 30px;
+		font-size: 11px;
+	}
 }

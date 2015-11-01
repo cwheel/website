@@ -92,10 +92,21 @@ body {
 	margin-top: 50px;
 }
 
-//Scale the menu button
 @media screen and (max-width:990px){
 	#bars {
 		font-size: 50px;
+	}
+
+	.page-title {
+		font-size: 55px;
+	}
+
+	.fa-icon {
+		width: 30px;
+	}
+
+	.page-content-container {
+		margin-left: 55px;
 	}
 }
 
@@ -103,15 +114,14 @@ body {
 	#bars {
 		font-size: 25px;
 	}
-}
 
-//Repair Font-Awesome 0-width issue on smaller screens
-@media screen and (max-width:990px){
-	.fa-icon {
-		width: 30px;
+	.page-title {
+		font-size: 30px;
 	}
-}
 
-@media screen and (min-width:991px){
 	.fa-icon {}	
+
+	.page-content-container {
+		margin-left: 30px;
+	}
 }
