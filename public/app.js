@@ -38,9 +38,23 @@ app.config(['$stateProvider','$urlRouterProvider', '$locationProvider', function
 }]);
 
 app.directive('background', function(){
-    return function(scope, element, attrs){
+    return function(scope, element, attrs) {
         element.css({
             'background-image': 'url(' + attrs.background +')'
         });
+    };
+});
+
+app.directive('rendersoffscreen', function(){
+    return function(scope, element, attrs) {
+    	if (attrs.rendersoffscreen == "true") {
+    		element.css({
+    		    'overflow': 'hidden'
+    		});
+    	} else {
+    		element.css({
+    		    'overflow': 'scroll'
+    		});
+    	}
     };
 });

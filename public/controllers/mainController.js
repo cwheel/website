@@ -9,6 +9,12 @@ app.controller('mainController',['$scope', '$state', '$timeout', function($scope
 	};
 
 	$scope.switchViews = function(route) {
+		if (route == 'home') {
+			$scope.offscreen = true;
+		} else {
+			$scope.offscreen = false;
+		}
+
 		$timeout(function() {
 			$scope.showNav = false;
 		}, 100);

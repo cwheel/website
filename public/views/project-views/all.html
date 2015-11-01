@@ -1,4 +1,4 @@
-<div class="container-fluid anim-zoom-out">
+<div class="anim-zoom-out">
 	<div class="row page-row-top">
 		<div class="col-md-3 page-title">
 			<div class="project-container">
@@ -12,8 +12,8 @@
 
 	<div class="page-content">
 		<div ng-repeat="projectRow in projects" class="row page-row">
-			<div ng-repeat="project in projectRow" class="col-md-3 project-tile-container">
-				<div class="project-tile" ng-click="projectSelected()" background="{{project.banner}}"></div>
+			<div ng-repeat="project in projectRow" class="col-md-3">
+					<div class="project-tile" ng-click="projectSelected()" background="{{project.banner}}"></div>
 			</div>
 		</div>
 	</div>

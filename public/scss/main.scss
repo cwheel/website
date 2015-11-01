@@ -1,5 +1,6 @@
 body {
-	overflow-y: hidden;
+	overflow: hidden; //Needed for animations that run over the edge of the screen
+	height: 100%;
 }
 
 #content {
@@ -14,10 +15,10 @@ body {
 	box-shadow: -17px -9px 26px -16px rgba(0,0,0,0.75);
 	backface-visibility: hidden;
 	background: #666;
-	overflow-x: hidden;
 	backface-visibility: hidden;
 	perspective: 1000;
 	z-index: 10;
+	overflow: hidden; 
 }
 
 #stage {
@@ -75,6 +76,7 @@ body {
 	bottom: 0;
 	right: 0;
 	z-index: 10;
+	overflow: scroll;
 }
 
 .page-row {
