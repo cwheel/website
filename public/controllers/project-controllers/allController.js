@@ -1,4 +1,4 @@
-app.controller('allController',['$scope', '$state', '$http', '$window', function($scope, $state, $http, $window) {
+app.controller('allController',['$scope', '$state', '$http', '$window', '$rootScope', function($scope, $state, $http, $window, $rootScope) {
 	$scope.projects = [[]];
 	$scope.itemsPerRow = 4;
 	$scope.projectsData = [];
@@ -9,7 +9,10 @@ app.controller('allController',['$scope', '$state', '$http', '$window', function
 		parseProjects();
 	});
 
-	$scope.projectSelected = function() {
+	$scope.projectSelected = function(i,j) {
+		//Should get a better method of doing this. Can't broadcast as
+		//the destination controller isn't up and running yet
+		$rootScope.currentProject = $scope.projects[i][j];
 		$state.go("projects.detail");
 	};
 

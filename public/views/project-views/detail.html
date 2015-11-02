@@ -7,9 +7,10 @@
 <div class="container-fluid anim-zoom-out">
 	<div class="row page-row-top">
 		<div class="col-md-3 page-title">
-			<div class="project-title"><i id="back" class="fa fa-chevron-left" ng-click="back()"></i> My Project</div>
-			<div id="project-tagline">Some tagline about this project here</div>
+			<div class="project-title"><i id="back" class="fa fa-chevron-left" ng-click="back()"></i> {{title}}</div>
+			<div id="project-tagline">{{tagline}}</div>
 		</div>
+
 		<div class="col-md-3"></div>
 		<div class="col-md-3"></div>
 		<div class="col-md-3"></div>
@@ -20,32 +21,35 @@
 			<div class="col-md-12 page-content-container">
 				<div class="project-subtitle">
 					<i class="fa fa-code fa-icon"></i> Built With
-					<div class="project-detail">Something good I guess</div>
+					<div class="project-detail">{{builtWith}}</div>
 				</div>
+
 				<div class="project-subtitle">
 					<i class="fa fa-clock-o fa-icon"></i> Built For
-					<div class="project-detail">Something good I guess</div>
+					<div class="project-detail">{{builtFor}}</div>
 				</div>
-				<div class="project-subtitle">
+
+				<div class="project-subtitle" ng-if="sourceCode != ''">
 					<i class="fa fa-github-alt fa-icon"></i> Source Code
-					<div class="project-detail">Something good I guess</div>
+					<div class="project-detail">Availible on <a ng-href="{{sourceCode}}">GitHub</a></div>
 				</div>
-				<div class="project-detail">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
-				</div>			
+
+				<div class="project-detail">{{description}}</div>			
 			</div>
 		</div>
 
 		<div class="row page-row-top">
 			<div class="page-content-container">
-				<div class="col-md-4">
-					<div class="project-image" ng-click="showImage()"></div>
+				<div class="col-md-4" ng-if="screen1 != ''">
+					<div class="project-image" background="screen1" ng-click="showImage(screen1)"></div>
 				</div>
-				<div class="col-md-4">
-					<div class="project-image-center" ng-click="showImage()"></div>
+
+				<div class="col-md-4" ng-if="screen2 != ''">
+					<div class="project-image-center" background="screen2" ng-click="showImage(screen2)"></div>
 				</div>
-				<div class="col-md-4">
-					<div class="project-image-right" ng-click="showImage()"></div>
+
+				<div class="col-md-4" ng-if="screen3 != ''">
+					<div class="project-image-right" background="screen3" ng-click="showImage(screen3)"></div>
 				</div>
 			</div>
 		</div>
