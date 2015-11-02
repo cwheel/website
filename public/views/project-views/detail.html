@@ -7,7 +7,7 @@
 <div class="container-fluid anim-zoom-out">
 	<div class="row page-row-top">
 		<div class="col-md-3 page-title">
-			<div class="project-title"><i id="back" class="fa fa-chevron-left" ng-click="back()"></i> {{title}}</div>
+			<div class="project-title"><i id="back" class="fa fa-chevron-left" ng-style="{'color' : accent}" ng-click="back()"></i> {{title}}</div>
 			<div id="project-tagline">{{tagline}}</div>
 		</div>
 
@@ -31,7 +31,7 @@
 
 				<div class="project-subtitle" ng-if="sourceCode != ''">
 					<i class="fa fa-github-alt fa-icon"></i> Source Code
-					<div class="project-detail">Availible on <a ng-href="{{sourceCode}}">GitHub</a></div>
+					<div class="project-detail">Availible on <a ng-href="{{sourceCode}}" ng-style="{'color' : accent}">GitHub</a></div>
 				</div>
 
 				<div class="project-detail">{{description}}</div>			
@@ -41,15 +41,15 @@
 		<div class="row page-row-top">
 			<div class="page-content-container">
 				<div class="col-md-4" ng-if="screen1 != ''">
-					<div class="project-image" background="screen1" ng-click="showImage(screen1)"></div>
+					<div class="project-image" background="screen1" ng-click="showImage(screen1)" ng-style="{'border-color' : accent}"></div>
 				</div>
 
 				<div class="col-md-4" ng-if="screen2 != ''">
-					<div class="project-image-center" background="screen2" ng-click="showImage(screen2)"></div>
+					<div class="project-image-center" background="screen2" ng-click="showImage(screen2)" ng-style="{'border-color' : accent}"></div>
 				</div>
 
 				<div class="col-md-4" ng-if="screen3 != ''">
-					<div class="project-image-right" background="screen3" ng-click="showImage(screen3)"></div>
+					<div class="project-image-right" background="screen3" ng-click="showImage(screen3)" ng-style="{'border-color' : accent}"></div>
 				</div>
 			</div>
 		</div>

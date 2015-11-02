@@ -14,6 +14,8 @@ app.controller('detailController',['$scope', '$state', '$rootScope', function($s
 		$scope.screen1 = $rootScope.currentProject.screen1;
 		$scope.screen2 = $rootScope.currentProject.screen2;
 		$scope.screen3 = $rootScope.currentProject.screen3;
+		$scope.accent = $rootScope.currentProject.accent;
+		$scope.special = $rootScope.currentProject.special;
 	}
 
 	$scope.back = function() {
