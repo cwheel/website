@@ -1,3 +1,5 @@
+$detail-spacing: 30px;
+
 .project-tile {
 	background-size: cover;
 	width: 90%;
@@ -79,12 +81,24 @@
 
 .project-detail {
 	font-weight: 300;
-	margin-bottom: 30px;
+	margin-bottom: $detail-spacing;
 	color: #FFF;
 }
 
 .project-subtitle-value {
 	margin-left: 10px;
+}
+
+.project-special {
+	font-size: 15px;
+	text-align: center;
+	color: #FFF;
+	font-weight: 600;
+	margin-bottom: $detail-spacing;
+}
+
+.project-special-icon {
+	font-size: 30px;
 }
 
 .project-image {
