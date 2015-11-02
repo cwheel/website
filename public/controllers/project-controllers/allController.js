@@ -1,4 +1,4 @@
-app.controller('allController',['$scope', '$state', '$http', '$window', '$rootScope', function($scope, $state, $http, $window, $rootScope) {
+app.controller('allController',['$scope', '$state', '$http', '$window', '$rootScope', '$timeout', function($scope, $state, $http, $window, $rootScope, $timeout) {
 	$scope.projects = [[]];
 	$scope.itemsPerRow = 4;
 	$scope.projectsData = [];
@@ -60,5 +60,5 @@ app.controller('allController',['$scope', '$state', '$http', '$window', '$rootSc
 		adjustRows();
 	});
 
-	adjustRows();
+	$timeout(adjustRows, 100);
 }]);
