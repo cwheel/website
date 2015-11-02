@@ -1,8 +1,7 @@
-app.controller('mainController',['$scope', '$state', '$timeout', function($scope, $state, $timeout) {
+app.controller('mainController',['$scope', '$state', '$timeout', '$rootScope', function($scope, $state, $timeout, $rootScope) {
 	$scope.shouldResume = false;
 
 	$scope.resumeClick = function() {
-		console.log($scope.shouldResume);
 		if ($scope.shouldResume) {
 			$scope.showNav = false;
 		}
@@ -18,11 +17,14 @@ app.controller('mainController',['$scope', '$state', '$timeout', function($scope
 
 	$scope.$watch('showNav', function () {
 		if (!$scope.showNav) {
+			$rootScope.$broadcast('navigationHidden');
 			$scope.shouldResume = false;
 		} else {
 			$timeout(function() {
 				$scope.shouldResume = true;
 			}, 500);
+
+			$rootScope.$broadcast('navigationShowning');
 		}
 	});
 }]);

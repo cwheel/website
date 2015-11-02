@@ -37,24 +37,30 @@ app.config(['$stateProvider','$urlRouterProvider', '$locationProvider', function
 		});
 }]);
 
-app.directive('background', function(){
+app.directive('background', function($parse) {
     return function(scope, element, attrs) {
-        element.css({
-            'background-image': 'url(' + attrs.background +')'
-        });
+    	scope.$watch(attrs.background, function() {
+	        element.css({
+	            'background-image': 'url(' + $parse(attrs.background)(scope) +')'
+	        });
+	    });
     };
 });
 
-app.directive('rendersoffscreen', function(){
+app.directive('showlightbox', function($parse){
     return function(scope, element, attrs) {
-    	if (attrs.rendersoffscreen == "true") {
-    		element.css({
-    		    'overflow': 'hidden'
-    		});
-    	} else {
-    		element.css({
-    		    'overflow': 'scroll'
-    		});
-    	}
+    	scope.$watch(attrs.showlightbox, function() {
+	    	if ($parse(attrs.showlightbox)(scope) == true) {
+	    		element.css({
+	    		    'visibility': 'visible',
+	    		    'opacity': 1
+	    		});
+	    	} else {
+	    		element.css({
+	    		    'visibility': 'hidden',
+	    		    'opacity': 0
+	    		});
+	    	}
+    	});
     };
 });
