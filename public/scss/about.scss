@@ -1,0 +1,43 @@
+#about-banner {
+	width: 100%;
+	height: 30%;
+	background-image: url("res/teton.jpg");
+	background-size: cover;
+}
+
+#about-banner-text {
+	width: 100%;
+	text-align: center;
+	color: #FFF;
+	top: 30%;
+	position: relative;
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 300;
+	font-size: 40px;
+}
+
+#about-banner-name {
+	font-weight: 500;
+}
+
+#about-banner-subtext {
+	@extend #about-banner-text;
+
+	font-weight: 300;
+	font-size: 15px;
+}
+
+#about-profile {
+	margin-right: auto;
+	margin-left: auto;
+
+	margin-top: -75px;
+	border: solid 1px #FFF;
+	height: 150px;
+	width: 150px;
+	border-radius: 150px;
+
+	background-image: url("res/profile.jpeg");
+	box-shadow: -17px -9px 26px -16px rgba(0,0,0,0.3);
+	background-size: cover;
+}
