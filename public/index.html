@@ -76,6 +76,12 @@
 				</div>
 
 				<div class="page" ui-view></div>
+
+				<div class="lightbox" showlightbox="lightboxIsVisible">
+					<div class="lightbox-image" background="lightboxImage" size="lightboxSize">
+						<i class="fa fa-times lightbox-close" ng-click="lightboxIsVisible = false"></i>
+					</div>
+				</div>
 			</div>
 		</div>
 

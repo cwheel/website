@@ -47,6 +47,17 @@ app.directive('background', function($parse) {
     };
 });
 
+app.directive('size', function($parse) {
+    return function(scope, element, attrs) {
+    	scope.$watch(attrs.size, function() {
+	        element.css({
+	            'width': $parse(attrs.size)(scope)[0],
+	            'height': $parse(attrs.size)(scope)[1],
+	        });
+	    });
+    };
+});
+
 app.directive('showlightbox', function($parse){
     return function(scope, element, attrs) {
     	scope.$watch(attrs.showlightbox, function() {

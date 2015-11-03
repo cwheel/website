@@ -17,7 +17,6 @@
 	background-size: cover;
 	background-position: center;
 	border-radius: 5px;
-	margin-bottom: 150px;
 }
 
 .lightbox-close {
@@ -31,18 +30,4 @@
 .lightbox-close:hover {
 	transform: scale3d(1.1,1.1,1);
 	cursor: pointer;
-}
-
-@media screen and (max-width:1124px){
-	.lightbox-image {
-		width: 725px;
-		height: 425px;
-	}
-}
-
-@media screen and (min-width:1125px){
-	.lightbox-image {
-		width: 1125px;
-		height: 650px
-	}
 }

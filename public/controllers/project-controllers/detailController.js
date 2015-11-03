@@ -1,7 +1,4 @@
-app.controller('detailController',['$scope', '$state', '$rootScope', function($scope, $state, $rootScope) {
-	$scope.lightboxIsVisible = false;
-	$scope.lightboxImage = "";
-
+app.controller('detailController',['$scope', '$state', '$rootScope', '$window', function($scope, $state, $rootScope, $window) {
 	if ($rootScope.currentProject == undefined) {
 		$state.go("projects.all");
 	} else {
@@ -23,13 +20,8 @@ app.controller('detailController',['$scope', '$state', '$rootScope', function($s
 	}
 
 	$scope.showImage = function(img) {
-		$scope.lightboxImage = img;
-		$scope.lightboxIsVisible = true;
+		$rootScope.$broadcast('showLightbox', img);		
 	};
-
-	$scope.$on('navigationShowning', function(e, args) {
-		$scope.lightboxIsVisible = false;
-	});
 
 	$scope.$on('showProjectDetails', function(e, args) {
 		console.log(args);
