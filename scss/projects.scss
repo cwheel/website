@@ -74,15 +74,28 @@ $detail-spacing: 30px;
 	font-weight: 400;
 }
 
+.project-description {
+	color: #FFF;
+}
+
 .project-subtitle {
 	font-weight: 700;
 	color: #FFF;
+	text-align: center;
+}
+
+.project-subtitle-icon {
+	font-size: 30px;
+}
+
+.project-sub-tag {
+	margin-bottom: 10px;
 }
 
 .project-detail {
 	font-weight: 300;
 	margin-bottom: $detail-spacing;
-	color: #FFF;
+	color: #cecece;
 }
 
 .project-subtitle-value {

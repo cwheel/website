@@ -45,43 +45,43 @@
 				<span id="lastName">Wheeler</span>
 			</div>
 
-			<div class="container nav-bar">
-				<div class="row">
-					<div class="col-md-2"></div>
-					<div class="col-md-2">
-						<div class="nav-bar-item" ng-click="switchViews('home')" ng-class='{"nav-bar-hidden":!showNav}'>
-							Home
+			<div id="main-container" ng-class='{"content-show-nav":showNav}'>
+				<div class="container nav-bar">
+					<div class="row">
+						<div class="col-xs-3">
+							<div class="nav-bar-item" ng-click="switchViews('home')" ng-class='{"nav-bar-hidden":!showNav}'>
+								Home
+							</div>
+						</div>
+						<div class="col-xs-3">
+							<div class="nav-bar-item" ng-click="switchViews('projects.all')" ng-class='{"nav-bar-hidden":!showNav}'>
+								Projects
+							</div>
+						</div>
+						<div class="col-xs-3">
+							<div class="nav-bar-item" ng-click="switchViews('exploration')" ng-class='{"nav-bar-hidden":!showNav}'>
+								Exploration
+							</div>
+						</div>
+						<div class="col-xs-3">
+							<div class="nav-bar-item" ng-click="switchViews('about')" ng-class='{"nav-bar-hidden":!showNav}'>
+								About
+							</div>
 						</div>
 					</div>
-					<div class="col-md-2">
-						<div class="nav-bar-item" ng-click="switchViews('projects.all')" ng-class='{"nav-bar-hidden":!showNav}'>
-							Projects
-						</div>
-					</div>
-					<div class="col-md-2">
-						<div class="nav-bar-item" ng-click="switchViews('exploration')" ng-class='{"nav-bar-hidden":!showNav}'>
-							Exploration
-						</div>
-					</div>
-					<div class="col-md-2">
-						<div class="nav-bar-item" ng-click="switchViews('about')" ng-class='{"nav-bar-hidden":!showNav}'>
-							About
-						</div>
-					</div>
-					<div class="col-md-2"></div>
-				</div>
-			</div>
-
-			<div id="content" ng-class='{"content-show-nav":showNav}' ng-click="resumeClick()">
-				<div id="bars" ng-click="showNav=!showNav">
-					<i class="fa fa-bars"></i>
 				</div>
 
-				<div class="page" ui-view></div>
+				<div id="content" ng-click="resumeClick()">
+					<div id="bars" ng-click="showNav=!showNav">
+						<i class="fa fa-bars"></i>
+					</div>
 
-				<div class="lightbox" showlightbox="lightboxIsVisible">
-					<div class="lightbox-image" background="lightboxImage" size="lightboxSize">
-						<i class="fa fa-times lightbox-close" ng-click="lightboxIsVisible = false"></i>
+					<div class="page" ui-view></div>
+
+					<div class="lightbox" showlightbox="lightboxIsVisible">
+						<div class="lightbox-image" background="lightboxImage" size="lightboxSize">
+							<i class="fa fa-times lightbox-close" ng-click="lightboxIsVisible = false"></i>
+						</div>
 					</div>
 				</div>
 			</div>
