@@ -7,11 +7,12 @@ var gulp = require('gulp'),
 	webserver = require('gulp-webserver');
 
 gulp.task('webserver', function() {
-  gulp.src('./public')
+  gulp.src('./')
     .pipe(webserver({
       livereload: true,
       open: true,
-      host: '0.0.0.0'
+      host: '0.0.0.0',
+      fallback: 'index.html'
     }));
 });
 
