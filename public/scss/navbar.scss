@@ -83,13 +83,13 @@
 }
 
 //Navbar font size
-@media screen and (max-width:990px) {
+@media screen and (max-width:990px) and (orientation: portrait) {
 	.nav-bar-item {
 		font-size: 3vw;
 	}
 }
 
-@media screen and (min-width:991px) {
+@media screen and (min-width:991px) and (orientation: portrait) {
 	.nav-bar-item {
 		font-size: 1.2vw;
 	}

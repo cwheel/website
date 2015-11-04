@@ -41,3 +41,21 @@
 	box-shadow: -17px -9px 26px -16px rgba(0,0,0,0.3);
 	background-size: cover;
 }
+
+@media screen and (max-height:850px) {
+	#about-banner-text {
+		font-size: 30px;
+	}
+
+	#about-profile {
+		margin-top: -50px;
+		border: solid 1px #FFF;
+		height: 100px;
+		width: 100px;
+		border-radius: 100px;
+	}
+
+	#about-banner-subtext {
+		font-size: 10px;
+	}
+}
