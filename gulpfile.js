@@ -17,16 +17,16 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('scss', function() {
-  return gulp.src('public/scss/**/*.scss')
+  return gulp.src('scss/**/*.scss')
     .pipe(sass())
     .pipe(minifycss())
     .pipe(autoprefixer())
     .pipe(concat('app.css'))
-    .pipe(gulp.dest('public'));
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('watch', function() {
-  	gulp.watch('public/scss/**/*.scss', ['scss']);
+  	gulp.watch('scss/**/*.scss', ['scss']);
 });
 
 gulp.task('default', ['webserver', 'scss', 'watch'], function() {});

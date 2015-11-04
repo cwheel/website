@@ -58,6 +58,12 @@ body {
 	z-index: 100;
 }
 
+.scrollable-page {
+	height: 100%;
+	width:  100%;
+	overflow: scroll;
+}
+
 .page-title {
 	color: #FFF;
 	font-size: 30px;
