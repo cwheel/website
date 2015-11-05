@@ -2,10 +2,6 @@ app.controller('mainController',['$scope', '$state', '$timeout', '$rootScope', '
 	$scope.shouldResume = false;
 	$scope.lightboxIsVisible = false;
 	$scope.lightboxImage = "";
-/*
-	$(window).resize(function(){
-    	$(".nav-bar").css('top', ($("#content").offset().top - ($(".nav-bar").height()/2))/2);
-	});*/
 
 	$scope.lightboxSize = [0,0];
 	var lightboxScale = 0.75;
@@ -30,7 +26,6 @@ app.controller('mainController',['$scope', '$state', '$timeout', '$rootScope', '
 			$scope.shouldResume = false;
 		} else {
 			$timeout(function() {
-				//$(".nav-bar").css('top', ($("#content").offset().top - ($(".nav-bar").height()/2))/2);
 				$scope.shouldResume = true;
 			}, 500);
 
