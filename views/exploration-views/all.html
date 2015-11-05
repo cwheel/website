@@ -11,8 +11,10 @@
 	</div>
 
 	<div class="page-content">
-		<div class="row page-row">
-			<div class="col-md-12">Exploration stuff here</div>
+		<div ng-repeat="tripRow in trips" class="row page-row">
+			<div ng-repeat="trip in tripRow" class="col-md-{{12/itemsPerRow}}">
+				<div class="trip-tile" ng-click="tripSelected($parent.$index,$index)" background="trip.thumb"></div>
+			</div>
 		</div>
 	</div>
 </div>
