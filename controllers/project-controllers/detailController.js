@@ -1,4 +1,4 @@
-app.controller('detailController',['$scope', '$state', '$rootScope', '$window', function($scope, $state, $rootScope, $window) {
+app.controller('projectDetailController',['$scope', '$state', '$rootScope', '$window', function($scope, $state, $rootScope, $window) {
 	if ($rootScope.currentProject == undefined) {
 		$state.go("projects.all");
 	} else {

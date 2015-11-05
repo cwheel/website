@@ -1,4 +1,4 @@
-app.controller('allController',['$scope', '$state', '$http', '$window', '$rootScope', '$timeout', function($scope, $state, $http, $window, $rootScope, $timeout) {
+app.controller('projectAllController',['$scope', '$state', '$http', '$window', '$rootScope', '$timeout', function($scope, $state, $http, $window, $rootScope, $timeout) {
 	$scope.projects = [[]];
 	$scope.itemsPerRow = 4;
 	$scope.projectsData = [];

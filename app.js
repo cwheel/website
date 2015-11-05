@@ -23,17 +23,22 @@ app.config(['$stateProvider','$urlRouterProvider', '$locationProvider', function
 		.state('projects.all', {
 			url: '/all',
 			templateUrl : 'views/project-views/all.html',
-			controller  : 'allController'
+			controller  : 'projectAllController'
 		})
 		.state('projects.detail', {
 			url: '/detail',
 			templateUrl : 'views/project-views/detail.html',
-			controller  : 'detailController'
+			controller  : 'projectDetailController'
 		})
 		.state('exploration', {
 			url: '/exploration',
 			templateUrl : 'views/exploration.html',
-			controller  : 'projectsController'
+			controller  : 'explorationController'
+		})
+		.state('exploration.all', {
+			url: '/all',
+			templateUrl : 'views/exploration-views/all.html',
+			controller  : 'explorationAllController'
 		});
 }]);
 
