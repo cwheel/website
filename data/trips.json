@@ -1,7 +1,7 @@
 {
 	"trips": [
 		{
-			"name": "Test-Trip",
+			"location": "Test-Trip",
 			"thumb": "/res/trips/test-trip/thumb.png"
 		}
 	]

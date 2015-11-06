@@ -1,19 +1,18 @@
 <div class="anim-zoom-out">
 	<div class="row page-row-top">
-		<div class="col-md-3 page-title">
-			<div class="project-container">
-				<div class="project-title">Exploration</div>
+		<div class="col-md-{{12/itemsPerRow}} page-title">
+			<div class="tile-page-container">
+				<div class="page-title">Exploration</div>
 			</div>
 		</div>
-		<div class="col-md-3"></div>
-		<div class="col-md-3"></div>
-		<div class="col-md-3"></div>
 	</div>
 
 	<div class="page-content">
 		<div ng-repeat="tripRow in trips" class="row page-row">
 			<div ng-repeat="trip in tripRow" class="col-md-{{12/itemsPerRow}}">
-				<div class="trip-tile" ng-click="tripSelected($parent.$index,$index)" background="trip.thumb"></div>
+				<div class="tile" ng-click="tripSelected($parent.$index,$index)" background="trip.thumb">
+					<div>{{trip.location}}</div>
+				</div>
 			</div>
 		</div>
 	</div>

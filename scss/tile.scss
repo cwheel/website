@@ -1,0 +1,55 @@
+.tile {
+	background-size: cover;
+	width: 90%;
+	height: 200px;
+	margin: 0 auto;
+	transition: all .45s cubic-bezier(0, 1.1, 0.5, 1.1);
+	margin-bottom: 60px;
+	box-shadow: -17px -9px 26px -16px rgba(0,0,0,0.3);
+	background-position: center;
+}
+
+.tile-spacing {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.tile:hover {
+	cursor: pointer;
+	transform: scale3d(1.1,1.1,1);
+}
+
+.tile-left {
+	@extend .project-tile;
+	float: left;
+	margin-left: 0;
+}
+
+.tile-right {
+	@extend .project-tile;
+	float: right;
+	margin-right: 0;
+}
+
+.title {
+	@extend .page-title;
+	float: left;
+}
+
+.tile-container {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.tile-page-container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+@media screen and (max-width:990px) {
+
+	.tile {
+		height: 450px;
+	}
+
+}
