@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-
 <html ng-app="app">
 	<head>
-		<meta charset="UTF-8">
-		
 		<!-- Angular -->
 		<script src="bower_components/angular/angular.js"></script>
 		<script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -40,6 +36,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		
 		<title>Cameron Wheeler</title>
+		<base href="/"></base>
 		<meta name="theme-color" content="#666">
 	</head>
 
@@ -81,13 +78,13 @@
 						<i class="fa fa-bars"></i>
 					</div>
 
-					<div class="page" ui-view></div>
-
 					<div class="lightbox" showlightbox="lightboxIsVisible">
 						<div class="lightbox-image" background="lightboxImage" size="lightboxSize">
 							<i class="fa fa-times lightbox-close" ng-click="lightboxIsVisible = false"></i>
 						</div>
 					</div>
+
+					<div class="page" ui-view></div>
 				</div>
 			</div>
 		</div>
