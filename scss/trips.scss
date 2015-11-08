@@ -13,3 +13,12 @@
 #trip-description {
 	color: #FFF;
 }
+
+@media screen and (max-width:990px) {
+
+	.trip-title {
+		//Should fix, temporary
+		padding-top: 400;
+	}
+
+}
