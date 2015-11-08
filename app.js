@@ -39,6 +39,11 @@ app.config(['$stateProvider','$urlRouterProvider', '$locationProvider', function
 			url: '/all',
 			templateUrl : 'views/exploration-views/all.html',
 			controller  : 'explorationAllController'
+		})
+		.state('exploration.detail', {
+			url: '/all',
+			templateUrl : 'views/exploration-views/trip.html',
+			controller  : 'explorationTripController'
 		});
 }]);
 

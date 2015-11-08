@@ -1,8 +1,10 @@
 {
 	"trips": [
 		{
-			"location": "Test-Trip",
-			"thumb": "/res/trips/test-trip/thumb.png"
+			"trip": "Hanging Canyon",
+			"location": "Grand Teton National Park, WY",
+			"thumb": "/res/trips/test-trip/thumb.png",
+			"description": "In the late spring of 2015, I made it out Grand Teton National Park and paied a visit to Hanging Canyon, a beautiful glacial canyon overlooking lake Jenny. A good amount of snow was left, making it a great spring apline ascent."
 		}
 	]
 }

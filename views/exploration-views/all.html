@@ -11,7 +11,7 @@
 		<div ng-repeat="tripRow in trips" class="row page-row">
 			<div ng-repeat="trip in tripRow" class="col-md-{{12/itemsPerRow}}">
 				<div class="tile" ng-click="tripSelected($parent.$index,$index)" background="trip.thumb">
-					<div>{{trip.location}}</div>
+					<div class="trip-title">{{trip.trip}}</div>
 				</div>
 			</div>
 		</div>
