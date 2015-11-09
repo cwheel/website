@@ -2,7 +2,7 @@
 	<div class="row page-row-top">
 		<div class="col-md-12 page-title">
 			<div class="tile-title"><i id="back" class="fa fa-chevron-left" ng-style="{'color' : accent}" ng-click="back()"></i> {{trip}}</div>
-			<div id="tile-tagline">{{location}}</div>
+			<div id="tile-tagline"><i class="fa fa-map-marker"></i> {{location}}</div>
 		</div>
 	</div>
 
@@ -11,6 +11,14 @@
 			<div class="page-content-container">
 				<div class="col-md-12">
 					<span id="trip-description">{{description}}</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="row page-row-top trip-gallery">
+			<div ng-repeat="imageRow in displayImages" class="row page-row">
+				<div ng-repeat="image in imageRow" class="col-md-{{12/itemsPerRow}}">
+					<div class="tile trip-tile" ng-click="viewImage(image)" background="image"></div>
 				</div>
 			</div>
 		</div>

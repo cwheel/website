@@ -3,8 +3,16 @@
 		{
 			"trip": "Hanging Canyon",
 			"location": "Grand Teton National Park, WY",
-			"thumb": "/res/trips/test-trip/thumb.png",
-			"description": "In the late spring of 2015, I made it out Grand Teton National Park and paied a visit to Hanging Canyon, a beautiful glacial canyon overlooking lake Jenny. A good amount of snow was left, making it a great spring apline ascent."
+			"thumb": "/res/trips/hanging-canyon/thumb.png",
+			"images": [
+				"/res/trips/hanging-canyon/img1.jpg",
+				"/res/trips/hanging-canyon/img2.jpg",
+				"/res/trips/hanging-canyon/img3.jpg",
+				"/res/trips/hanging-canyon/img4.jpg",
+				"/res/trips/hanging-canyon/img5.jpg",
+				"/res/trips/hanging-canyon/img6.jpg"
+			],
+			"description": "In the late spring of 2015, I made it out Grand Teton National Park. At the recommendation of a parks employee, I paid a visit to Hanging Canyon - a beautiful glacial canyon overlooking lake Jenny. A large amount of snow was left on the upper portion of the route, making it a great spring alpine ascent. I made it up to the actual canyon in around three hours but decided to cut my stay short. I had originally planned on climbing up to the Jaw (the official end of Hanging Canyon), but left prematurely due to deteriorating snow conditions and a short timeline for the day."
 		}
 	]
 }
