@@ -41,6 +41,48 @@
 		 	"screen2"      : "/res/projects/wizer/screen2.jpg",
 		 	"screen3"      : "/res/projects/wizer/screen3.jpg",
 		 	"description"  : "The wireless in our residence hall is often plagued by rouge devices like wireless printers, Chromecasts, personal hotspots and other interfering devices. Even worse, areas of our building have a poor wireless signal overall regardless of the areas devices. We've spent a great number of hours roaming our hall with laptops and phones, staring at ugly text based tables searching for devices and checking signal strength. We wanted to deploy devices that could do the job we couldn't; to monitor the hall and its networks (or any area for that matter) 24/7 and look through the data at our leisure, so we built WiZer. WiZer works by connecting to microcontroller based devices such as the Intel Edison and Rasberry Pi that run a custom python application. The application reports the wireless networks and a multitude of information about them to a central machine running a WiZer instance. WiZer then cleans up the information and stores it in MongoDB, keeping it at the ready for searching and future analyzation. WiZer features a beautiful web based client that allows for easy network searching, rouge device detection, network monitoring, wireless channel analysis and wireless history storage; all with the luxury of never leaving your desk."
+		},
+		{
+			"title"        : "Sprox",
+		 	"tagline"      : "Information for Students",
+		 	"builtWith"    : "Mongo, Node, Angular, Express",
+		 	"builtFor"     : "Started Fall 2014",
+		 	"sourceCode"   : "https://github.com/cwheel/sprox",
+		 	"special"      : "",
+		 	"accent"       : "#3a3a3a",
+		 	"banner"       : "/res/projects/sprox/thumb.jpg",
+		 	"screen1"      : "/res/projects/wizer/screen1.jpg",
+		 	"screen2"      : "/res/projects/wizer/screen2.jpg",
+		 	"screen3"      : "/res/projects/wizer/screen3.jpg",
+		 	"description"  : "The wireless in our residence hall is often plagued by rouge devices like wireless printers, Chromecasts, personal hotspots and other interfering devices. Even worse, areas of our building have a poor wireless signal overall regardless of the areas devices. We've spent a great number of hours roaming our hall with laptops and phones, staring at ugly text based tables searching for devices and checking signal strength. We wanted to deploy devices that could do the job we couldn't; to monitor the hall and its networks (or any area for that matter) 24/7 and look through the data at our leisure, so we built WiZer. WiZer works by connecting to microcontroller based devices such as the Intel Edison and Rasberry Pi that run a custom python application. The application reports the wireless networks and a multitude of information about them to a central machine running a WiZer instance. WiZer then cleans up the information and stores it in MongoDB, keeping it at the ready for searching and future analyzation. WiZer features a beautiful web based client that allows for easy network searching, rouge device detection, network monitoring, wireless channel analysis and wireless history storage; all with the luxury of never leaving your desk."
+		},
+		{
+			"title"        : "RocketShip",
+		 	"tagline"      : "Summer 2012",
+		 	"builtWith"    : "Cocoa with just a touch of Carbon",
+		 	"builtFor"     : "HackUMass, Spring 2015",
+		 	"sourceCode"   : "https://github.com/cwheel/wizer",
+		 	"special"      : "",
+		 	"accent"       : "#af0000",
+		 	"banner"       : "/res/projects/rocketship/thumb.jpg",
+		 	"screen1"      : "/res/projects/wizer/screen1.jpg",
+		 	"screen2"      : "/res/projects/wizer/screen2.jpg",
+		 	"screen3"      : "/res/projects/wizer/screen3.jpg",
+		 	"description"  : "The wireless in our residence hall is often plagued by rouge devices like wireless printers, Chromecasts, personal hotspots and other interfering devices. Even worse, areas of our building have a poor wireless signal overall regardless of the areas devices. We've spent a great number of hours roaming our hall with laptops and phones, staring at ugly text based tables searching for devices and checking signal strength. We wanted to deploy devices that could do the job we couldn't; to monitor the hall and its networks (or any area for that matter) 24/7 and look through the data at our leisure, so we built WiZer. WiZer works by connecting to microcontroller based devices such as the Intel Edison and Rasberry Pi that run a custom python application. The application reports the wireless networks and a multitude of information about them to a central machine running a WiZer instance. WiZer then cleans up the information and stores it in MongoDB, keeping it at the ready for searching and future analyzation. WiZer features a beautiful web based client that allows for easy network searching, rouge device detection, network monitoring, wireless channel analysis and wireless history storage; all with the luxury of never leaving your desk."
+		},
+		{
+			"title"        : "Tenjin 2",
+		 	"tagline"      : "Information and lighting with just a touch",
+		 	"builtWith"    : "Mongo, Node, Angular, Express, Java, Arduino, Android SDK",
+		 	"builtFor"     : "Summer 2015",
+		 	"sourceCode"   : "https://github.com/cwheel/tenjin-2",
+		 	"special"      : "",
+		 	"accent"       : "#9544d3",
+		 	"banner"       : "/res/projects/tenjin/thumb.jpg",
+		 	"screen1"      : "/res/projects/wizer/screen1.jpg",
+		 	"screen2"      : "/res/projects/wizer/screen2.jpg",
+		 	"screen3"      : "/res/projects/wizer/screen3.jpg",
+		 	"description"  : "The wireless in our residence hall is often plagued by rouge devices like wireless printers, Chromecasts, personal hotspots and other interfering devices. Even worse, areas of our building have a poor wireless signal overall regardless of the areas devices. We've spent a great number of hours roaming our hall with laptops and phones, staring at ugly text based tables searching for devices and checking signal strength. We wanted to deploy devices that could do the job we couldn't; to monitor the hall and its networks (or any area for that matter) 24/7 and look through the data at our leisure, so we built WiZer. WiZer works by connecting to microcontroller based devices such as the Intel Edison and Rasberry Pi that run a custom python application. The application reports the wireless networks and a multitude of information about them to a central machine running a WiZer instance. WiZer then cleans up the information and stores it in MongoDB, keeping it at the ready for searching and future analyzation. WiZer features a beautiful web based client that allows for easy network searching, rouge device detection, network monitoring, wireless channel analysis and wireless history storage; all with the luxury of never leaving your desk."
 		}
 	]
 }
