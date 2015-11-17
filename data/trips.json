@@ -13,6 +13,95 @@
 				"/res/trips/hanging-canyon/img6.jpg"
 			],
 			"description": "In the late spring of 2015, I made it out Grand Teton National Park. At the recommendation of a parks employee, I paid a visit to Hanging Canyon - a beautiful glacial canyon overlooking lake Jenny. A large amount of snow was left on the upper portion of the route, making it a great spring alpine ascent. I made it up to the actual canyon in around three hours but decided to cut my stay short. I had originally planned on climbing up to the Jaw (the official end of Hanging Canyon), but left prematurely due to deteriorating snow conditions and a short timeline for the day."
+		},
+		{
+			"trip": "Arches",
+			"location": "Arches National Park, UT",
+			"thumb": "/res/trips/arches/thumb.jpg",
+			"images": [
+				"/res/trips/arches/img1.jpg",
+				"/res/trips/arches/img2.jpg",
+				"/res/trips/arches/img3.jpg",
+				"/res/trips/arches/img4.jpg",
+				"/res/trips/arches/img5.jpg"
+			],
+			"description": "The deserts not my favorite place in the world, but when the chance to see Arches came up, I definitely wanted to stop. Not too much exploring besides driving around, taking a few photos and just admiring the views."
+		},
+		{
+			"trip": "Cascade Canyon",
+			"location": "Grand Teton National Park, WY",
+			"thumb": "/res/trips/cascade-canyon/thumb.jpg",
+			"images": [
+				"/res/trips/cascade-canyon/img1.jpg",
+				"/res/trips/cascade-canyon/img2.jpg",
+				"/res/trips/cascade-canyon/img3.jpg",
+				"/res/trips/cascade-canyon/img4.jpg",
+				"/res/trips/cascade-canyon/img5.jpg"
+			],
+			"description": "One of the many canyons in in Teton National Park I visited during my spring trip. We stayed for two nights and ventured into the South Fork. At the time, the south Fork was still in nearly full winter, with snow drifts many feet deep."
+		},
+		{
+			"trip": "Lawn Lake",
+			"location": "Rocky Mountain National Park, CO",
+			"thumb": "/res/trips/rocky-mountain/thumb.jpg",
+			"images": [
+				"/res/trips/rocky-mountain/img1.jpg",
+				"/res/trips/rocky-mountain/img2.jpg",
+				"/res/trips/rocky-mountain/img3.jpg",
+				"/res/trips/rocky-mountain/img4.jpg"
+			],
+			"description": "A quick overnight visit to Lawn Lake in the northern section of Rocky Mountain National Park. Route finding was tricky as the trail all but disappeared in the deep snow on our way up. We had a nice quite night and were unaccompanied aside from the occasional marmot. Our first day was gorgeous, however our second day gave way to rain showers."
+		},
+		{
+			"trip": "Glacier",
+			"location": "Glacier Mountain National Park, MT",
+			"thumb": "/res/trips/glacier/thumb.jpg",
+			"images": [
+				"/res/trips/glacier/img1.jpg",
+				"/res/trips/glacier/img2.jpg",
+				"/res/trips/glacier/img3.jpg",
+				"/res/trips/glacier/img4.jpg",
+				"/res/trips/glacier/img5.jpg",
+				"/res/trips/glacier/img6.jpg",
+				"/res/trips/glacier/img7.jpg"
+			],
+			"description": "A short day hike with a bit of snow trekking in the end. I do not recall the exact name or location of the trail, I just pulled out my map and started heading up. A steep but short hike up from the road gave way to expansive meadows, snowfields and snow of the most breath taking vistas I've encountered. It may be the most beautiful place I've ever been able to travel to, and certainly my favorite."
+		},
+		{
+			"trip": "Lions Head",
+			"location": "Mt. Washington, NH",
+			"thumb": "/res/trips/lions-head/thumb.jpg",
+			"images": [
+				"/res/trips/lions-head/img1.jpg",
+				"/res/trips/lions-head/img2.jpg",
+				"/res/trips/lions-head/img3.jpg",
+				"/res/trips/lions-head/img4.jpg"
+			],
+			"description": "A classic ascent up the Lions Head winter route to the summit of Mt. Washington. It was a beautiful day with low winds and around 10 inches of fresh snow. Small avalanches could be seen on the headwall of Tuckerman's as we skirted the edge of the ravine."
+		},
+		{
+			"trip": "Spinx Trail",
+			"location": "Great Gulf Wilderness, NH",
+			"thumb": "/res/trips/sphinx-trail/thumb.jpg",
+			"images": [
+				"/res/trips/sphinx-trail/img1.jpg",
+				"/res/trips/sphinx-trail/img2.jpg",
+				"/res/trips/sphinx-trail/img3.jpg",
+				"/res/trips/sphinx-trail/img4.jpg"
+			],
+			"description": "A summer backpacking trip over the top of Mt. Washington and into the Great Gulf Wilderness. I took the Glen Boulder trail up the south east side of Mt. Washington and descended into the wilderness via Sphinx trail. Some small patches of snow were still visible and had not yet melted out in the summers heat."
+		},
+		{
+			"trip": "Presidential Traverse",
+			"location": "Great Gulf Wilderness, NH",
+			"thumb": "/res/trips/presidential-traverse/thumb.jpg",
+			"images": [
+				"/res/trips/presidential-traverse/img1.jpg",
+				"/res/trips/presidential-traverse/img2.jpg",
+				"/res/trips/presidential-traverse/img3.jpg",
+				"/res/trips/presidential-traverse/img4.jpg"
+			],
+			"description": "A classic traverse over some of the notable peaks of the White Mountains. Took around three days in total from start to finish and covered the peaks from Washington to Madison. Ended the trip with a decent down Madison Gulf Trail, certainly one of the more adventurous ways down I've taken; consisting of large, steep granite blocks strewn about in what essentially could be called a stream."
 		}
 	]
 }
