@@ -94,3 +94,16 @@
 	font-weight: 700;
 	font-size: 2vw;
 }
+
+.contact-icon {
+	font-size: large;
+	margin-left:5px;
+	margin-right: 5px;
+	transition: all 0.5s;
+	color: #FFF;
+}
+
+.contact-icon:hover {
+	cursor: pointer;
+	color: #999;
+}
