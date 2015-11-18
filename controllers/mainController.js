@@ -2,6 +2,7 @@ app.controller('mainController',['$scope', '$state', '$timeout', '$rootScope', '
 	$scope.shouldResume = false;
 	$scope.lightboxIsVisible = false;
 	$scope.lightboxImage = "";
+	$scope.renderLightbox = 'none';
 
 	$scope.lightboxSize = [0,0];
 	var lightboxScale = 0.75;
@@ -35,6 +36,7 @@ app.controller('mainController',['$scope', '$state', '$timeout', '$rootScope', '
 	});
 
 	$scope.$on('showLightbox', function(e, args) {
+		console.log("");
 		//For a 16:9 image filling ~60% of the window
 		var wp = (($window.innerWidth * lightboxScale) - (($window.innerWidth * lightboxScale) % 16)) / 16;
 		var hp = (($window.innerHeight * lightboxScale) - (($window.innerHeight * lightboxScale) % 9)) / 9;
@@ -45,4 +47,9 @@ app.controller('mainController',['$scope', '$state', '$timeout', '$rootScope', '
 		$scope.lightboxImage = args;
 		$scope.lightboxIsVisible = true;
 	});
+
+	//Quick fix for lightbox display issue
+	$timeout(function() {
+		$scope.renderLightbox = '';
+	}, 1000);
 }]);
