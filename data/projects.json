@@ -44,31 +44,31 @@
 		},
 		{
 			"title"        : "Sprox",
-		 	"tagline"      : "Information for Students",
-		 	"builtWith"    : "Mongo, Node, Angular, Express",
+		 	"tagline"      : "Beautiful Information for Students",
+		 	"builtWith"    : "Mongo, Node, Angular, Express, SpookyJS",
 		 	"builtFor"     : "Started Fall 2014",
 		 	"sourceCode"   : "https://github.com/cwheel/sprox",
 		 	"special"      : "",
-		 	"accent"       : "#3a3a3a",
+		 	"accent"       : "#7f7f7f",
 		 	"banner"       : "/res/projects/sprox/thumb.jpg",
-		 	"screen1"      : "/res/projects/wizer/screen1.jpg",
-		 	"screen2"      : "/res/projects/wizer/screen2.jpg",
-		 	"screen3"      : "/res/projects/wizer/screen3.jpg",
-		 	"description"  : "The wireless in our residence hall is often plagued by rouge devices like wireless printers, Chromecasts, personal hotspots and other interfering devices. Even worse, areas of our building have a poor wireless signal overall regardless of the areas devices. We've spent a great number of hours roaming our hall with laptops and phones, staring at ugly text based tables searching for devices and checking signal strength. We wanted to deploy devices that could do the job we couldn't; to monitor the hall and its networks (or any area for that matter) 24/7 and look through the data at our leisure, so we built WiZer. WiZer works by connecting to microcontroller based devices such as the Intel Edison and Rasberry Pi that run a custom python application. The application reports the wireless networks and a multitude of information about them to a central machine running a WiZer instance. WiZer then cleans up the information and stores it in MongoDB, keeping it at the ready for searching and future analyzation. WiZer features a beautiful web based client that allows for easy network searching, rouge device detection, network monitoring, wireless channel analysis and wireless history storage; all with the luxury of never leaving your desk."
+		 	"screen1"      : "/res/projects/sprox/screen1.jpg",
+		 	"screen2"      : "/res/projects/sprox/screen2.jpg",
+		 	"screen3"      : "/res/projects/sprox/screen3.jpg",
+		 	"description"  : "The information available to students at my University is great, despite being a bit fragmented across a plethora of websites with varying quality and design. Sprox was our prototype of a better system. We built an interface thats elegant yet functional, easy to use and provides only the data students want. Sprox aggregates student data via SpookyJS and keeps discovered data in a MongoDB instance. Sprox shows students their class schedule, housing information, parking permits, campus maps, student debit account funds and dining statistics."
 		},
 		{
 			"title"        : "RocketShip",
-		 	"tagline"      : "Summer 2012",
+		 	"tagline"      : "Shortcuts, Shortcuts for Everything",
 		 	"builtWith"    : "Cocoa with just a touch of Carbon",
-		 	"builtFor"     : "HackUMass, Spring 2015",
+		 	"builtFor"     : "Summer 2012",
 		 	"sourceCode"   : "https://github.com/cwheel/wizer",
 		 	"special"      : "",
 		 	"accent"       : "#af0000",
 		 	"banner"       : "/res/projects/rocketship/thumb.jpg",
-		 	"screen1"      : "/res/projects/wizer/screen1.jpg",
-		 	"screen2"      : "/res/projects/wizer/screen2.jpg",
-		 	"screen3"      : "/res/projects/wizer/screen3.jpg",
-		 	"description"  : "The wireless in our residence hall is often plagued by rouge devices like wireless printers, Chromecasts, personal hotspots and other interfering devices. Even worse, areas of our building have a poor wireless signal overall regardless of the areas devices. We've spent a great number of hours roaming our hall with laptops and phones, staring at ugly text based tables searching for devices and checking signal strength. We wanted to deploy devices that could do the job we couldn't; to monitor the hall and its networks (or any area for that matter) 24/7 and look through the data at our leisure, so we built WiZer. WiZer works by connecting to microcontroller based devices such as the Intel Edison and Rasberry Pi that run a custom python application. The application reports the wireless networks and a multitude of information about them to a central machine running a WiZer instance. WiZer then cleans up the information and stores it in MongoDB, keeping it at the ready for searching and future analyzation. WiZer features a beautiful web based client that allows for easy network searching, rouge device detection, network monitoring, wireless channel analysis and wireless history storage; all with the luxury of never leaving your desk."
+		 	"screen1"      : "/res/projects/rocketship/screen1.jpg",
+		 	"screen2"      : "/res/projects/rocketship/screen2.jpg",
+		 	"screen3"      : "/res/projects/rocketship/screen3.jpg",
+		 	"description"  : "Shortly after the Mac App store was released into the wild, I built RocketShip. RocketShip did what I wanted but could never find on OS X, good, reliable keyboard shortcuts. I built a series of hook-able actions that could be triggered by custom shortcuts. These shortcuts were then managed in the background by RocketShip. I delved fairly deep into Objective-C and even a bit of Carbon (for shortcut event handling). After building RocketShip, I released it on the Mac App store for $1.99. RocketShip was the first piece of software I had ever built for sale and did quite well for something I built while only a sophomore in high school. Built for OS X 10.6 through 10.8."
 		},
 		{
 			"title"        : "Tenjin 2",
@@ -79,10 +79,10 @@
 		 	"special"      : "",
 		 	"accent"       : "#9544d3",
 		 	"banner"       : "/res/projects/tenjin/thumb.jpg",
-		 	"screen1"      : "/res/projects/wizer/screen1.jpg",
-		 	"screen2"      : "/res/projects/wizer/screen2.jpg",
-		 	"screen3"      : "/res/projects/wizer/screen3.jpg",
-		 	"description"  : "The wireless in our residence hall is often plagued by rouge devices like wireless printers, Chromecasts, personal hotspots and other interfering devices. Even worse, areas of our building have a poor wireless signal overall regardless of the areas devices. We've spent a great number of hours roaming our hall with laptops and phones, staring at ugly text based tables searching for devices and checking signal strength. We wanted to deploy devices that could do the job we couldn't; to monitor the hall and its networks (or any area for that matter) 24/7 and look through the data at our leisure, so we built WiZer. WiZer works by connecting to microcontroller based devices such as the Intel Edison and Rasberry Pi that run a custom python application. The application reports the wireless networks and a multitude of information about them to a central machine running a WiZer instance. WiZer then cleans up the information and stores it in MongoDB, keeping it at the ready for searching and future analyzation. WiZer features a beautiful web based client that allows for easy network searching, rouge device detection, network monitoring, wireless channel analysis and wireless history storage; all with the luxury of never leaving your desk."
+		 	"screen1"      : "/res/projects/tenjin/screen1.jpg",
+		 	"screen2"      : "/res/projects/tenjin/screen2.jpg",
+		 	"screen3"      : "/res/projects/tenjin/screen3.jpg",
+		 	"description"  : "Tenjin is an elegant room lighting and information system designed with UMass Amherst in mind. We started Tenjin with a simple goal in mind: to bring our simple dorm room into the modern era. The first version of Tenjin supported only a simple informational screen with NPR news, current weather, and some of our favorite sub-Reddits among others. During the summer of our second year, we embarked on Tenjin 2, a complete rebuild of Tenjin in NodeJS. Not only does Tenjin 2 provided its classic information screen (now with support for 1080p monitors and proper scaling), but it also supports controlling LED strips for beautiful and elegant room lighting. I constructed a custom lighting circuit with three channels that operate over standard ethernet cable and connect to modified LED lighting strips with ethernet jacks attached. Each cable is capable of controlling a red, green, blue and white channel. Additionally, the entire system can be controlled remotely via an Android application."
 		}
 	]
 }
