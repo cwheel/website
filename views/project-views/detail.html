@@ -15,7 +15,9 @@
 				</div>
 
 				<div class="project-subtitle col-md-4">
-					<i class="fa fa-clock-o fa-icon project-subtitle-icon"></i> <div class="project-sub-tag">Built For</div>
+					<i class="fa fa-clock-o fa-icon project-subtitle-icon"></i>
+					<div class="project-sub-tag" ng-if="timeTitle">Built For</div>
+					<div class="project-sub-tag" ng-if="!timeTitle">Started</div>
 					<div class="project-detail">{{builtFor}}</div>
 				</div>
 

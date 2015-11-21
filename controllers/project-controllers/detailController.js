@@ -13,6 +13,7 @@ app.controller('projectDetailController',['$scope', '$state', '$rootScope', '$wi
 		$scope.screen3 = $rootScope.currentProject.screen3;
 		$scope.accent = $rootScope.currentProject.accent;
 		$scope.special = $rootScope.currentProject.special;
+		$scope.timeTitle = $rootScope.currentProject.timeTitle;
 	}
 
 	$scope.back = function() {
