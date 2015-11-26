@@ -38,38 +38,43 @@
 }
 
 .cloud {
-	width: 250%;
-	height: 100%;
-	background-size: cover;
+	width: 300%;
+	height: 50%;
+	background-size: contain;
+	background-repeat: repeat-x;
 	position: absolute;
-	opacity: 0.1;
+	opacity: 0.05;
+	animation: cloud-drift linear infinite;
 }
 
 #clouds-layer-1 {
 	@extend .cloud;
+	margin-top: 5%;
 	background-image: url("res/clouds2.png");
-	animation: cloud-drift 100s linear infinite;
+	animation: cloud-drift 150s linear infinite;
 }
 
 #clouds-layer-2 {
 	@extend .cloud;
+	margin-top: 2%;
 	background-image: url("res/clouds.png");
 	transform: translate3d(100%, 0, 0);
 	animation-delay: 30s;
-	animation-duration: 120s;
+	animation-duration: 200s;
 }
 
 #clouds-layer-3 {
 	@extend .cloud;
+	margin-top: 5%;
 	background-image: url("res/clouds2.png");
 	transform: translate3d(100%, 0, 0);
-	animation-duration: 140s;
+	animation-duration: 250s;
 }
 
 #clouds-layer-base {
 	@extend #clouds-layer-1;
 	background-image: url("res/clouds.png");
-	animation: cloud-drift-once 135s linear infinite;
+	animation: cloud-drift-once 340s linear infinite;
 	animation-fill-mode: forwards;
 }
 

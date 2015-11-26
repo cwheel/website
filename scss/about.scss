@@ -70,7 +70,6 @@ $col-spacing: 45px;
 }
 
 .project-subtitle-detail {
-	
 	color: #cecece;
 }
 
@@ -95,6 +94,34 @@ $col-spacing: 45px;
 .about-col-right {
 	padding-right: 0;
 	padding-left: $col-spacing;
+}
+
+.about-contact-icon {
+	color: #888;
+	text-align: center;
+	font-size: 20px;
+}
+
+.about-contact-icon a:hover {
+	color: #FFF;
+}
+
+.about-contact-icon a {
+	color: #888;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 300;
+	transition: all 0.5s;
+}
+
+.about-contact-icons {
+	margin-top: 45px;
+	margin-bottom: 45px;
+}
+
+.fa-center {
+	padding-left: 5px;
 }
 
 @media screen and (max-height:850px) {
