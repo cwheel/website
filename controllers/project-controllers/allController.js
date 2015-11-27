@@ -20,7 +20,7 @@ app.controller('projectAllController',['$scope', '$state', '$http', '$window', '
 		var w = $window.innerWidth;
 
 		if ($scope.projectsData.length > 0) {
-			if (w < 1550 && w > 1180) {
+			if (w < 1550 && w > 1140) {
 				if ($scope.itemsPerRow != 3) {
 					$scope.itemsPerRow = 3;
 					parseProjects();

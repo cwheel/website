@@ -25,7 +25,7 @@ app.controller('explorationTripController', ['$scope', '$state', '$http', '$wind
 		var w = $window.innerWidth;
 
 		if ($scope.images.length > 0) {
-			if (w < 1550 && w > 1180) {
+			if (w < 1550 && w > 1140) {
 				if ($scope.itemsPerRow != 3) {
 					$scope.itemsPerRow = 3;
 					parseImages();
