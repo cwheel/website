@@ -17,7 +17,7 @@
 		},
 		{
 			"title"        : "Familee",
-		 	"tagline"      : "Wellness for the ones' you care about",
+		 	"tagline"      : "Wellness for the ones you care about",
 		 	"builtWith"    : "Mongo, Node, Angular, Express and the Fitbit API",
 		 	"builtFor"     : "HackUMass, Fall 2015",
 		 	"sourceCode"   : "https://github.com/cwheel/Familee",
@@ -28,11 +28,11 @@
 		 	"screen2"      : "/res/projects/familee/screen2.png",
 		 	"screen3"      : "/res/projects/familee/screen3.png",
 		 	"timeTitle"     : true,
-		 	"description"  : "Wellness for the ones' you care about, in a beautiful and elegant web app. At HackUMass 2015, our team submitted Familee; a web application that pulls data from connected Fitbit devices to keep relatives, caregivers and family members informed about their older loved ones' health. Familee looks at time spent walking, sleeping, and heart rate each day. Familee also attempts to infer when a loved one is sick by combining all three data points into one; a \"sickness\"score'. Additionally, Familee uses Twilio to send text message alerts when it senses troubling health statistics. Familee furthers its goal of wellness by texting medication reminders at predetermined times throughout the day, ensuring that your loved ones' are not only alright, but that they're taking what they're supposed to."
+		 	"description"  : "Wellness for the ones you care about, in a beautiful and elegant web app. At HackUMass 2015, our team submitted Familee; a web application that pulls data from connected Fitbit devices to keep relatives, caregivers and family members informed about their older loved ones' health. Familee looks at time spent walking, sleeping, and heart rate each day. Familee also attempts to infer when a loved one is sick by combining all three data points into one; a \"sickness\"score'. Additionally, Familee uses Twilio to send text message alerts when it senses troubling health statistics. Familee furthers its goal of wellness by texting medication reminders at predetermined times throughout the day, ensuring that your loved ones' are not only alright, but that they're taking what they're supposed to."
 		},
 		{
 			"title"        : "WiZer",
-		 	"tagline"      : "Smarter Wireless Insights",
+		 	"tagline"      : "Smarter wireless insights",
 		 	"builtWith"    : "Mongo, Node, Angular, Express, Python, Intel Edison and Raspberry Pi",
 		 	"builtFor"     : "HackUMass, Spring 2015",
 		 	"sourceCode"   : "https://github.com/cwheel/wizer",
@@ -47,7 +47,7 @@
 		},
 		{
 			"title"        : "Sprox",
-		 	"tagline"      : "Beautiful Information for Students",
+		 	"tagline"      : "Beautiful information for students",
 		 	"builtWith"    : "Mongo, Node, Angular, Express, SpookyJS",
 		 	"builtFor"     : "Fall 2014",
 		 	"sourceCode"   : "https://github.com/cwheel/sprox",
@@ -62,7 +62,7 @@
 		},
 		{
 			"title"        : "RocketShip",
-		 	"tagline"      : "Shortcuts; Shortcuts for Everything",
+		 	"tagline"      : "Shortcuts; shortcuts for everything",
 		 	"builtWith"    : "Cocoa with just a touch of Carbon",
 		 	"builtFor"     : "Summer 2012",
 		 	"sourceCode"   : "https://github.com/cwheel/wizer",
