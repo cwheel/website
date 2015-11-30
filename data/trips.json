@@ -25,7 +25,7 @@
 				"/res/trips/arches/img4.jpg",
 				"/res/trips/arches/img5.jpg"
 			],
-			"description": "The deserts not my favorite place in the world, but when the chance to see Arches came up, I definitely wanted to stop. Not too much exploring besides driving around, taking a few photos and admiring the views."
+			"description": "The desert's not my favorite place in the world, but when the chance to see Arches came up, I definitely wanted to stop. Not too much exploring besides driving around, taking a few photos and admiring the views."
 		},
 		{
 			"trip": "Cascade Canyon",
@@ -65,10 +65,10 @@
 				"/res/trips/glacier/img6.jpg",
 				"/res/trips/glacier/img7.jpg"
 			],
-			"description": "A short day hike with a bit of snow trekking in the end. I do not recall the exact name or location of the trail, I just pulled out my map and started heading up. A steep but short hike up from the road gave way to expansive meadows, snowfields and some of the most breath taking vistas I've encountered. It may be the most beautiful place I've ever been able to travel to, and certainly my favorite."
+			"description": "A short day hike with a bit of snow trekking in the end. I do not recall the exact name or location of the trail, I just pulled out my map and started heading up. A steep but short hike up from the road gave way to expansive meadows, snowfields and some of the most breathtaking vistas I've encountered. It may be the most beautiful place I've ever been able to travel to, and certainly my favorite."
 		},
 		{
-			"trip": "Lions Head",
+			"trip": "Lion Head",
 			"location": "Mt. Washington, NH",
 			"thumb": "/res/trips/lions-head/thumb.jpg",
 			"images": [
@@ -77,7 +77,7 @@
 				"/res/trips/lions-head/img3.jpg",
 				"/res/trips/lions-head/img4.jpg"
 			],
-			"description": "A classic ascent up the Lions Head winter route to the summit of Mt. Washington. It was a beautiful day with low winds and around 10 inches of fresh snow. Small avalanches could be seen on the headwall of Tuckerman's as we skirted the northern ridge."
+			"description": "A classic ascent up the Lion Head winter route to the summit of Mt. Washington. It was a beautiful day with low winds and around 10 inches of fresh snow. Small avalanches could be seen on the headwall of Tuckerman's as we skirted the northern ridge."
 		},
 		{
 			"trip": "Sphinx Trail",
@@ -89,7 +89,7 @@
 				"/res/trips/sphinx-trail/img3.jpg",
 				"/res/trips/sphinx-trail/img4.jpg"
 			],
-			"description": "A summer backpacking trip over the top of Mt. Washington and into the Great Gulf Wilderness. I took the Glen Boulder trail up the southeast side of Mt. Washington and descended into the wilderness via Sphinx trail. Some small patches of snow were still visible and had not yet melted out in the summer's heat."
+			"description": "A summer backpacking trip over the top of Mt. Washington and into the Great Gulf Wilderness. I took the Glen Boulder trail up the southeast side of Mt. Washington and descended into the wilderness via Sphinx Trail. Some small patches of snow were still visible and had not yet melted out in the summer's heat."
 		},
 		{
 			"trip": "Presidential Traverse",
