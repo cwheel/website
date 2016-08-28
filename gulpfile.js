@@ -4,7 +4,8 @@ var gulp = require('gulp'),
 	minifycss = require('gulp-minify-css'),
 	concat = require('gulp-concat')
 	livereload = require('gulp-livereload'),
-	webserver = require('gulp-webserver');
+	webserver = require('gulp-webserver'),
+  bower = require('gulp-bower');
 
 gulp.task('webserver', function() {
   gulp.src('./')
@@ -29,4 +30,9 @@ gulp.task('watch', function() {
   	gulp.watch('scss/**/*.scss', ['scss']);
 });
 
+gulp.task('bowerInstall', function() {
+  return bower();
+});
+
 gulp.task('default', ['webserver', 'scss', 'watch'], function() {});
+gulp.task('build', ['bowerInstall', 'scss'], function() {});

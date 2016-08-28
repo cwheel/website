@@ -20,19 +20,22 @@
 }
 
 .tile-left {
-	@extend .project-tile;
+	@extend .tile;
 	float: left;
 	margin-left: 0;
 }
 
 .tile-right {
-	@extend .project-tile;
+	@extend .tile;
 	float: right;
 	margin-right: 0;
 }
 
 .title {
-	@extend .page-title;
+	color: #FFF;
+	font-size: 30px;
+	font-weight: 700;
+	
 	float: left;
 }
 
