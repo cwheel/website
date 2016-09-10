@@ -7,17 +7,18 @@
 }
 
 #tagline {
-	font-size: 12px;
+	font-size: 14px;
 	opacity: 0.9;
 }
 
 #home-first {
-	font-size: 30px;
+	font-size: 40px;
 	font-weight: 700;
 }
 
 #home-last {
-	font-size: 30px;
+	font-size: 40px;
+    font-weight: 100;
 }
 
 #contact-bar {
@@ -79,30 +80,30 @@
 }
 
 #name {
-	top: 5px;
-	left: 10px;
+	top: 25px;
+	left: 30px;
 	position: absolute;
 	z-index: 5;
 }
 
 #lastName {
 	color: white;
-	opacity: 0.6;
+	opacity: 0.5;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
-	font-size: 2vw;
+	font-size: 1.75vw;
 }
 
 #firstName {
 	color: white;
-	opacity: 0.6;
+	opacity: 0.5;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
-	font-size: 2vw;
+	font-size: 1.75vw;
 }
 
 .contact-icon {
-	font-size: large;
+	font-size:large;
 	margin-left:5px;
 	margin-right: 5px;
 	transition: all 0.5s;
