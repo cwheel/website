@@ -1,5 +1,20 @@
 {
 	"projects" : [
+        {
+			"title"        : "Vinolytics",
+		 	"tagline"      : "All the data you need to fill your glass.",
+		 	"builtWith"    : "Node, Express, React, Redux, RabbitMQ, Heroku",
+		 	"builtFor"     : "April 2016",
+		 	"sourceCode"   : "",
+		 	"special"      : "",
+		 	"accent"       : "#60657d",
+		 	"banner"       : "/res/projects/vinolytics/thumb.jpg",
+		 	"screen1"      : "/res/projects/vinolytics/screen1.png",
+		 	"screen2"      : "/res/projects/vinolytics/screen2.png",
+		 	"screen3"      : "/res/projects/vinolytics/screen3.png",
+		 	"timeTitle"     : false,
+		 	"description"  : "In early April 2016, I was contacted regarding a potential project: Vinolytics. At that time, Vinolytics was just an idea: that managing fine wine shouldn’t be done using archaic tools with dated interfaces and lackluster features. Vinolytics would enable collectors to view their cellars in real time with live performance metrics and valuations from a variety of sources. I was contracted to turn this idea into a reality. I designed the underlying architecture and then developed our minimum viable product; a product which was well received by initial users. I currently work on Vinolytics and continually implement new features with the goal of expanding our platforms capabilities."
+		},
 		{
 			"title"        : "imccelerate",
 		 	"tagline"      : "Real time image acceleration, caching and CDN offloading",
