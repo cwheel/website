@@ -30,6 +30,21 @@
 		 	"timeTitle"     : true,
 		 	"description"  : "After working with the web for long enough, I realized that there seemed to be little done regarding the large amount of bandwidth required to load an image, and the detrimental effect it had on page load performance. To solve this, I suggested we build a piece of Express middleware, imccelerate, as our project for HackRPI. Imccelerate works by looking for image requests. If an image is requested, imccelerate will scale the image appropriately based on the user's screen resolution and screen density. The resulting image is then dropped into an LRU cache to let others with the same device and/or screen enjoy a massive speed boost in page load time, up to 90% faster with 90% less bandwidth consumed in some of cases. Furthermore, imccelerate features a proper image sizing system. Why request a massive, page filling image if it's just for a thumbnail? I took a cue from Bootstrap (and their sizing convention), and added a variety of relative sizes ranging from extra small to extra large. These sizes can seamlessly be appended to each image request. Even better, our team incorporated vision logic from Microsoft Oxford to ensure certain sizes look their best. What happens if you take a 4K image and scale it down to a profile picture? Well, usually nothing good. We added a profile size just for cases like this. Prior to delivering and caching the image, we ship the resource off to Microsoft Oxford and request that the image be bounded to a face, ensuring nobody ever gets cut off. Finally, we attempted to solve one last issue. What happens if a site comes under heavy load and still needs to deliver its largest and most bandwidth intense resources? Simple, send the resources somewhere that can handle the load! We constructed a dynamic CDN offloading system to automatically push heavily requested images to Azure's high powered content delivery network. This system seamlessly moves future clients to it, all without any interruption in service. When the resource becomes less requested in the future, it will drop out of the cache and future clients will initiate the caching procedure again."
 		},
+        {
+			"title"        : "Status",
+		 	"tagline"      : "A change managment platform for UMass Amherst",
+		 	"builtWith"    : "Angular, Python, Django",
+		 	"builtFor"     : "December 2015",
+		 	"sourceCode"   : "",
+		 	"special"      : "",
+		 	"accent"       : "#8a1a18",
+		 	"banner"       : "/res/projects/status/thumb.jpg",
+		 	"screen1"      : "/res/projects/status/screen1.png",
+		 	"screen2"      : "/res/projects/status/screen2.png",
+		 	"screen3"      : "/res/projects/status/screen3.png",
+		 	"timeTitle"     : false,
+		 	"description"  : "While working for Enterprise Services at UMass Amherst, another student and I were tasked with designing a system for change and incident management. We built an Angular front end and used an existing Django backend to construct a clean, modern interface for managing infrastructure at the university. Our system supported change requests, incidents and notifications for either event. Additionally, we supported routine changes (changes which happen frequently) and the various levels of required manager approval needed to ensure changes happen in a manageable fashion."
+		},
 		{
 			"title"        : "Familee",
 		 	"tagline"      : "Wellness for the ones you care about",
