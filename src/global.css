@@ -5,12 +5,14 @@
 
 @font-face {
     font-family: 'Cocogoose Pro';
-    src: local('Cocogoose Pro'), url(/fonts/cocogoose_pro_regular.woff2) format('woff');
+    src: local('Cocogoose Pro'),
+        url(/fonts/cocogoose_pro_regular.woff2) format('woff');
 }
 
 @font-face {
     font-family: 'Cocogoose Pro Light';
-    src: local('Cocogoose Pro Light'), url(/fonts/cocogoose_pro_light.woff2) format('woff');
+    src: local('Cocogoose Pro Light'),
+        url(/fonts/cocogoose_pro_light.woff2) format('woff');
 }
 
 #___gatsby {
