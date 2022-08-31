@@ -3,8 +3,9 @@ import { spacing, spacingMixin } from './util/spacing';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-const heading = (props) => css`
-    color: white;
+const heading = ({ color, ...props }) => css`
+    font-family: Cocogoose Pro;
+    color: ${color || 'black'};
     margin: 0;
 
     ${spacingMixin(props)}

@@ -1,3 +1,5 @@
+import '../global.css';
+
 import * as React from 'react';
 
 import { FlexContainer, VerticalCenter } from '../components/ui/flex';

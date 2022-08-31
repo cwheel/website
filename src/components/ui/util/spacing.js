@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-const spacing = (num) => `${num * 5}px`;
+const spacing = num => `${num * 5}px`;
 
 const spacingMixin = ({
     marginLeft,
@@ -14,15 +14,15 @@ const spacingMixin = ({
     fullWidth,
     fullHeight,
 }) => css`
-    margin-left: ${spacing(marginLeft)};
-    margin-right: ${spacing(marginRight)};
-    margin-top: ${spacing(marginTop)};
-    margin-bottom: ${spacing(marginBottom)};
+    ${marginLeft && `margin-left: ${spacing(marginLeft)};`}
+    ${marginRight && `margin-right: ${spacing(marginRight)};`}
+    ${marginTop && `margin-top: ${spacing(marginTop)};`}
+    ${marginBottom && `margin-bottom: ${spacing(marginBottom)};`}
 
-    padding-left: ${spacing(paddingLeft)};
-    padding-right: ${spacing(paddingRight)};
-    padding-top: ${spacing(paddingTop)};
-    padding-bottom: ${spacing(paddingBottom)};
+    ${paddingLeft && `padding-left: ${spacing(paddingLeft)};`}
+    ${paddingRight && `padding-right: ${spacing(paddingRight)};`}
+    ${paddingTop && `padding-top: ${spacing(paddingTop)};`}
+    ${paddingBottom && `padding-bottom: ${spacing(paddingBottom)};`}
 
     ${fullWidth && `width: 100%`};
     ${fullHeight && `height: 100%`};
