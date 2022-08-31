@@ -19,7 +19,7 @@ const NavigationContainer = styled(FlexContainer)`
 const NavigationLink = styled.a`
     font-family: Cocogoose Pro;
     color: white;
-    
+
     text-decoration: none;
     padding: ${spacing(2)};
 

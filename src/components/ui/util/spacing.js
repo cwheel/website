@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-const spacing = num => `${num * 5}px`;
+const spacing = (num) => `${num * 5}px`;
 
 const spacingMixin = ({
     marginLeft,

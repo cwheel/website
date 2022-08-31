@@ -1,14 +1,16 @@
-import '../../global.css'
+import '../../global.css';
 
 import * as React from 'react';
-import styled from '@emotion/styled';
-import { graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
+
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { H1 } from '../../components/ui/headings';
+
 import { FlexColumn } from '../../components/ui/flex';
+import { H1 } from '../../components/ui/headings';
+import { Helmet } from 'react-helmet';
 import Navigation from '../../components/Navigation';
+import { graphql } from 'gatsby';
 import { spacing } from '../../components/ui/util/spacing';
+import styled from '@emotion/styled';
 
 const HeroImage = styled(GatsbyImage)`
     max-height: 500px;
@@ -17,7 +19,12 @@ const HeroImage = styled(GatsbyImage)`
 const Content = styled.p`
     font-size: large;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-family: Cocogoose Pro;
     }
 `;
@@ -32,19 +39,23 @@ const Title = styled(H1)`
     padding-left: ${spacing(4)};
 `;
 
-export default function Template({
-    data,
-}) {
+export default function Template({ data }) {
     const { markdownRemark } = data;
-    const { frontmatter: {
-        name,
-        images,
-    }, html } = markdownRemark;
+    const {
+        frontmatter: { name, images },
+        html,
+    } = markdownRemark;
 
     return (
         <>
             <Helmet>
-                <meta property="og:image" content={images[0].childImageSharp.gatsbyImageData.images.fallback.src} />
+                <meta
+                    property="og:image"
+                    content={
+                        images[0].childImageSharp.gatsbyImageData.images
+                            .fallback.src
+                    }
+                />
             </Helmet>
 
             <Navigation />
@@ -52,15 +63,17 @@ export default function Template({
             <HeroImage alt="" image={getImage(images[0])} />
 
             <ContentWrapper>
-                <Title marginTop={15} marginBottom={5}>{name}</Title>
+                <Title marginTop={15} marginBottom={5}>
+                    {name}
+                </Title>
                 <Content dangerouslySetInnerHTML={{ __html: html }}></Content>
             </ContentWrapper>
         </>
     );
-};
+}
 
 export const pageQuery = graphql`
-    query($id: String!) {
+    query ($id: String!) {
         markdownRemark(id: { eq: $id }) {
             html
             frontmatter {

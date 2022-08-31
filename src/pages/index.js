@@ -61,15 +61,15 @@ const IndexPage = () => {
             <FlexContainer fullWidth fullHeight marginLeft={15}>
                 <VerticalCenter>
                     <div>
-                        <H1 color='white'>Hello!</H1>
-                        <H2 color='white'>
+                        <H1 color="white">Hello!</H1>
+                        <H2 color="white">
                             I&rsquo;m <Highlight>Cameron Wheeler</Highlight>
                         </H2>
-                        <H3 color='white'>
+                        <H3 color="white">
                             and I&rsquo;m a web performance Tech Lead{' '}
                             <Highlight>@Yelp</Highlight>.
                         </H3>
-                        <H3 color='white' marginTop={10}>
+                        <H3 color="white" marginTop={10}>
                             When I&rsquo;m not engineering, you&rsquo;ll find me
                             &nbsp;
                             <span style={{ position: 'relative' }}>
