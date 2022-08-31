@@ -1,0 +1,39 @@
+/* @font-face {
+    font-family: 'Cocogoose Pro Italic';
+    src: local('Cocogoose Pro Italic'), url(/fonts/cocogoose_pro_italic.woff2) format('woff');
+} */
+
+@font-face {
+    font-family: 'Cocogoose Pro';
+    src: local('Cocogoose Pro'), url(/fonts/cocogoose_pro_regular.woff2) format('woff');
+}
+
+@font-face {
+    font-family: 'Cocogoose Pro Light';
+    src: local('Cocogoose Pro Light'), url(/fonts/cocogoose_pro_light.woff2) format('woff');
+}
+
+#___gatsby {
+    width: 100%;
+    height: 100%;
+}
+
+#gatsby-focus-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    overflow-x: hidden;
+
+    font-family: 'Cocogoose Pro';
+    background-color: black;
+}
