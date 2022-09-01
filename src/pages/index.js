@@ -6,7 +6,7 @@ import { FlexContainer, VerticalCenter } from '../components/ui/flex';
 import { H1, H2, H3 } from '../components/ui/headings';
 import { PrimaryColor, SecondaryColor } from '../components/ui/util/colors';
 import { animated, config, useTransition } from 'react-spring';
-
+import Link from '../components/ui/link';
 import Navigation from '../components/Navigation';
 import styled from '@emotion/styled';
 
@@ -67,7 +67,7 @@ const IndexPage = () => {
                         </H2>
                         <H3 color="white">
                             and I&rsquo;m a web performance Tech Lead{' '}
-                            <Highlight>@Yelp</Highlight>.
+                            <Link href='https://yelp.com'><Highlight>@Yelp</Highlight></Link>.
                         </H3>
                         <H3 color="white" marginTop={10}>
                             When I&rsquo;m not engineering, you&rsquo;ll find me

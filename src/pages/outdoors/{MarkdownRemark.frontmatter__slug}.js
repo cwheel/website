@@ -7,10 +7,11 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { FlexColumn } from '../../components/ui/flex';
 import { H1 } from '../../components/ui/headings';
 import { Helmet } from 'react-helmet';
-import Navigation from '../../components/Navigation';
+
 import { graphql } from 'gatsby';
 import { spacing } from '../../components/ui/util/spacing';
 import styled from '@emotion/styled';
+import StickyHeader from '../../components/StickyHeader';
 
 const HeroImage = styled(GatsbyImage)`
     max-height: 500px;
@@ -36,7 +37,7 @@ const ContentWrapper = styled(FlexColumn)`
 
 const Title = styled(H1)`
     border-left: solid ${spacing(2)};
-    padding-left: ${spacing(4)};
+    padding-left: ${spacing(6)};
 `;
 
 export default function Template({ data }) {
@@ -45,6 +46,12 @@ export default function Template({ data }) {
         frontmatter: { name, images },
         html,
     } = markdownRemark;
+
+    const heroRef = React.createRef();
+
+    React.useEffect(() => {
+        console.log(heroRef)
+    }, [heroRef])
 
     return (
         <>
@@ -56,11 +63,15 @@ export default function Template({ data }) {
                             .fallback.src
                     }
                 />
+
+                <title>{name}</title>
             </Helmet>
 
-            <Navigation />
-
-            <HeroImage alt="" image={getImage(images[0])} />
+            <StickyHeader heroRef={heroRef} />
+           
+            <div ref={heroRef}>
+                <HeroImage alt="" image={getImage(images[0])} />
+            </div>
 
             <ContentWrapper>
                 <Title marginTop={15} marginBottom={5}>

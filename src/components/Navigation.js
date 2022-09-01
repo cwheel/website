@@ -5,6 +5,7 @@ import { spacing, spacingMixin } from '../components/ui/util/spacing';
 import { FlexContainer } from '../components/ui/flex';
 import { PrimaryColor } from './ui/util/colors';
 import styled from '@emotion/styled';
+import { useSpring, animated } from 'react-spring';
 
 const links = [
     { title: 'GitHub', href: 'https://github.com/cwheel', target: '_blank' },
@@ -16,7 +17,7 @@ const NavigationContainer = styled(FlexContainer)`
     z-index: 1;
 `;
 
-const NavigationLink = styled.a`
+const NavigationLink = styled(animated.a)`
     font-family: Cocogoose Pro;
     color: white;
 
@@ -24,8 +25,9 @@ const NavigationLink = styled.a`
     padding: ${spacing(2)};
 
     &:hover {
-        background-color: white;
-        color: ${PrimaryColor};
+        background: ${({ dark }) => dark ? PrimaryColor : 'white'};
+        /* Important to override the active spring */
+        color: ${({ dark }) => dark ? 'white' : PrimaryColor} !important;
     }
 
     transition: all 0.25s;
@@ -33,12 +35,16 @@ const NavigationLink = styled.a`
     ${spacingMixin}
 `;
 
-const Navigation = () => {
+const Navigation = ({ dark }) => {
+    const darkSpring = useSpring({
+        color: dark ? PrimaryColor : 'white',
+    });
+
     return (
         <NavigationContainer absolute fullWidth alignRight marginTop={8}>
             <FlexContainer marginRight={15}>
                 {links.map(({ title, href, target }) => (
-                    <NavigationLink marginLeft={8} href={href} target={target}>
+                    <NavigationLink marginLeft={8} href={href} target={target} style={darkSpring} dark={dark}>
                         {title}
                     </NavigationLink>
                 ))}
