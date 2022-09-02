@@ -14,7 +14,9 @@ const StickyHeaderWrapper = styled(animated.div)`
 `;
 
 const StickyHeader = ({ heroRef }) => {
-    const [heroVisible, setHeroVisible] = React.useState(!(document && document?.body?.scrollTop > 500));
+    const [heroVisible, setHeroVisible] = React.useState(
+        !(document && document?.body?.scrollTop > 500)
+    );
 
     const headerBackgroundSpring = useSpring({
         background: heroVisible ? 'rgba(0,0,0,0)' : 'rgba(255,255,255,1)',
