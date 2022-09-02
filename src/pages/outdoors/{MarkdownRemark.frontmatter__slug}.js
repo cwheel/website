@@ -7,11 +7,10 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { FlexColumn } from '../../components/ui/flex';
 import { H1 } from '../../components/ui/headings';
 import { Helmet } from 'react-helmet';
-
+import StickyHeader from '../../components/StickyHeader';
 import { graphql } from 'gatsby';
 import { spacing } from '../../components/ui/util/spacing';
 import styled from '@emotion/styled';
-import StickyHeader from '../../components/StickyHeader';
 
 const HeroImage = styled(GatsbyImage)`
     max-height: 500px;
@@ -49,10 +48,6 @@ export default function Template({ data }) {
 
     const heroRef = React.createRef();
 
-    React.useEffect(() => {
-        console.log(heroRef)
-    }, [heroRef])
-
     return (
         <>
             <Helmet>
@@ -68,7 +63,7 @@ export default function Template({ data }) {
             </Helmet>
 
             <StickyHeader heroRef={heroRef} />
-           
+
             <div ref={heroRef}>
                 <HeroImage alt="" image={getImage(images[0])} />
             </div>

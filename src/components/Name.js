@@ -1,7 +1,9 @@
 import * as React from 'react';
-import styled from '@emotion/styled';
+
+import { animated, useSpring } from 'react-spring';
+
 import { spacingMixin } from './ui/util/spacing';
-import { useSpring, animated } from 'react-spring';
+import styled from '@emotion/styled';
 
 const NameTag = styled(animated.span)`
     z-index: 2;
@@ -20,10 +22,12 @@ const Name = ({ dark }) => {
     });
 
     return (
-        <a href='/'>
-            <NameTag marginLeft={15} marginTop={8} style={darkSpring}>cwheeler</NameTag>
+        <a href="/">
+            <NameTag marginLeft={15} marginTop={8} style={darkSpring}>
+                cwheeler
+            </NameTag>
         </a>
     );
-}
+};
 
 export default Name;

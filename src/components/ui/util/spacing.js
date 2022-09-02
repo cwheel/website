@@ -13,6 +13,7 @@ const spacingMixin = ({
     paddingBottom,
     fullWidth,
     fullHeight,
+    z,
 }) => css`
     ${marginLeft && `margin-left: ${spacing(marginLeft)};`}
     ${marginRight && `margin-right: ${spacing(marginRight)};`}
@@ -26,6 +27,8 @@ const spacingMixin = ({
 
     ${fullWidth && `width: 100%`};
     ${fullHeight && `height: 100%`};
+
+    ${z && `z-index: ${z}`}
 `;
 
 export { spacingMixin, spacing };

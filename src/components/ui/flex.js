@@ -9,6 +9,9 @@ const FlexContainer = styled.div`
     ${({ flex }) => flex && `flex: ${flex}`};
     ${({ absolute }) => absolute && `position: absolute`};
     ${({ alignRight }) => alignRight && 'flex-direction: row-reverse'};
+
+    ${({ verticalCenter }) => verticalCenter && 'align-items: center'};
+    ${({ horizontalCenter }) => horizontalCenter && 'justify-content: center'};
 `;
 
 const FlexColumn = styled(FlexContainer)`
