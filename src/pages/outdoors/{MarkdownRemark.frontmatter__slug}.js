@@ -11,6 +11,7 @@ import StickyHeader from '../../components/StickyHeader';
 import { graphql } from 'gatsby';
 import { spacing } from '../../components/ui/util/spacing';
 import styled from '@emotion/styled';
+import { TextColor } from '../../components/ui/util/colors';
 
 const HeroImage = styled(GatsbyImage)`
     max-height: 500px;
@@ -18,6 +19,7 @@ const HeroImage = styled(GatsbyImage)`
 
 const Content = styled.p`
     font-size: large;
+    color: ${TextColor};
 
     h1,
     h2,

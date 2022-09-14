@@ -2,35 +2,33 @@ import '../../global.css';
 
 import * as React from 'react';
 
-import { FlexContainer } from '../../components/ui/flex';
-import { H3 } from '../../components/ui/headings';
+import { animated, config, useTransition } from 'react-spring';
+
+import { FlexContainer, FlexColumn, FlexUnit } from '../../components/ui/flex';
+import { H1, H2, H3, H4 } from '../../components/ui/headings';
 import { Helmet } from 'react-helmet';
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import StickyHeader from '../../components/StickyHeader';
-import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
-import { useTransition, animated, config } from 'react-spring';
-
-const HeroImage = css`
-    max-height: 500px;
-    filter: grayscale() brightness(0.75);
-`;
+import { spacing } from '../../components/ui/util/spacing';
+import { TextColor, TextLightColor } from '../../components/ui/util/colors';
+import heroImages from './heroImages';
 
 const Hero = styled.div`
     position: relative;
     height: 500px;
 `;
 
-const HeroTitle = styled(H3)`
+const HeroTitle = styled(H1)`
     opacity: 0.75;
+    font-size: ${spacing(5)};
 `;
 
 const Location = styled.span`
     position: absolute;
     z-index: 10;
-    bottom: 20px;
-    right: 20px;
+    bottom: ${spacing(4)};
+    right: ${spacing(4)};
     color: white;
     font-size: small;
 `;
@@ -39,14 +37,80 @@ const HeroWrapper = styled(animated.div)`
     position: absolute;
 `;
 
-const heroImages = [
-    { image: <StaticImage alt="hero1" src="../../../static/images/outdoors/hero1.jpg" css={HeroImage} />, location: 'Above Kenosha Pass, Park County, CO' },
-    { image: <StaticImage alt="hero2" src="../../../static/images/outdoors/hero2.jpg" css={HeroImage} />, location: 'Swiss Syphon, Cenote Jailhouse, Tulum Mexico' },
+const Post = styled.a`
+    text-decoration: none;
+    border-top: 1px solid black;
+    margin-top: ${spacing(4)};
+    color: ${TextColor};
+
+    detail {
+        color: red;
+    }
+`;
+
+const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'November',
+    'December'
 ];
+
+const ContentWrapper = styled(FlexColumn)`
+    margin-left: 15%;
+    margin-right: 15%;
+`;
+
+const PostDetail = styled.span`
+    color: ${TextLightColor};
+`;
+
+const Month = styled(H3)`
+    color: ${TextLightColor}
+`;
+
+const groupPosts = (nodes) => {
+    const years = {};
+
+    nodes.forEach(node => {
+        if (years[node.frontmatter.year]) {
+            if (years[node.frontmatter.year][node.frontmatter.month]) {
+                years[node.frontmatter.year][node.frontmatter.month].push(node);
+            } else {
+                years[node.frontmatter.year][node.frontmatter.month] = [node];
+            }
+        } else {
+            years[node.frontmatter.year] = {[node.frontmatter.month]: [node]};
+
+        }
+    });
+
+    const ret = [];
+    const yearsSorted = Object.keys(years).sort((a, b) => parseInt(a, 10) > parseInt(b, 10));
+    yearsSorted.forEach((year) => ret.push({ year, months: years[year.toString()] }));
+
+    ret.forEach(year => {
+        const monthsSorted = Object.keys(year.months).sort((a, b) => months[a] > months[b]);
+        const sortedMonths = [];
+
+        monthsSorted.forEach(month => sortedMonths.push({ month, posts: year.months[month] }));
+
+        year.months = sortedMonths;
+    });
+
+    return ret;
+};
 
 export default function Template({ data }) {
     const heroRef = React.createRef();
-    const [hero, setHero] = React.useState(0);
+    const [hero, setHero] = React.useState(Math.floor(Math.random() * (heroImages.length + 1)));
+    const posts = groupPosts(data.allMarkdownRemark.nodes);
 
     const heroTransitions = useTransition(hero, {
         from: { opacity: 0 },
@@ -58,7 +122,7 @@ export default function Template({ data }) {
     React.useEffect(() => {
         setTimeout(() => {
             setHero((hero) => {
-                if (hero + 1 == heroImages.length) {
+                if (hero + 1 === heroImages.length) {
                     return 0;
                 } else {
                     return hero + 1;
@@ -87,11 +151,8 @@ export default function Template({ data }) {
                     <HeroTitle color="white">Outdoor Projects</HeroTitle>
                 </FlexContainer>
 
-                
                 {heroTransitions((style, hero) => (
-                    <HeroWrapper
-                        style={style}
-                    >
+                    <HeroWrapper style={style}>
                         {heroImages[hero].image}
                     </HeroWrapper>
                 ))}
@@ -99,14 +160,42 @@ export default function Template({ data }) {
                 <Location>{heroImages[hero].location}</Location>
             </Hero>
 
-            {data.allMarkdownRemark.nodes.map((node) => (
-                <a
-                    href={`/outdoors/${node.frontmatter.slug}`}
-                    key={node.frontmatter.slug}
-                >
-                    {node.frontmatter.name}
-                </a>
-            ))}
+            <ContentWrapper marginTop={15}>
+                {posts.map((group) => {
+                    return (
+                        <>
+                            <H2>{group.year}</H2>
+
+                            {group.months.map((month) => {
+                                
+                                return (
+                                    <>
+                                        <Month>{month.month}</Month>
+                                        {month.posts.map(post => (
+                                            <Post
+                                                href={`/outdoors/${post.frontmatter.slug}`}
+                                                key={post.frontmatter.slug}
+                                            >
+                                                <FlexContainer marginTop={4} verticalCenter>
+                                                    <FlexUnit>
+                                                        <H4>{post.frontmatter.name}</H4>
+                                                    </FlexUnit>
+                                                    
+                                                    <FlexUnit alignRight>
+                                                        <FlexContainer verticalCenter><PostDetail>{post.frontmatter.location}</PostDetail></FlexContainer>
+                                                    </FlexUnit>
+                                                </FlexContainer>
+                                                
+                                                <PostDetail>{post.frontmatter.activity}</PostDetail>
+                                                <p>{post.excerpt}</p>
+                                            </Post>
+                                        ))}
+                                </>)
+                            })}
+                        </>
+                    );
+                })}
+            </ContentWrapper>
         </>
     );
 }
@@ -115,9 +204,14 @@ export const pageQuery = graphql`
     query {
         allMarkdownRemark {
             nodes {
+                excerpt(pruneLength: 300)
                 frontmatter {
                     slug
                     name
+                    month
+                    year
+                    location
+                    activity
                 }
             }
         }

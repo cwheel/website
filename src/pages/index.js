@@ -46,7 +46,7 @@ const IndexPage = () => {
     React.useEffect(() => {
         setTimeout(() => {
             setActivity((activity) => {
-                if (activity + 1 == activites.length) {
+                if (activity + 1 === activites.length) {
                     return 0;
                 } else {
                     return activity + 1;
