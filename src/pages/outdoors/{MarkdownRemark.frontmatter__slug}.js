@@ -8,10 +8,10 @@ import { FlexColumn } from '../../components/ui/flex';
 import { H1 } from '../../components/ui/headings';
 import { Helmet } from 'react-helmet';
 import StickyHeader from '../../components/StickyHeader';
+import { TextColor, TextLightColor } from '../../components/ui/util/colors';
 import { graphql } from 'gatsby';
 import { spacing } from '../../components/ui/util/spacing';
 import styled from '@emotion/styled';
-import { TextColor } from '../../components/ui/util/colors';
 
 const HeroImage = styled(GatsbyImage)`
     max-height: 500px;
@@ -28,6 +28,26 @@ const Content = styled.p`
     h5,
     h6 {
         font-family: Cocogoose Pro;
+    }
+
+    picture {
+        max-height: 500px;
+    }
+
+    figcaption {
+        color: ${TextLightColor};
+        text-align: center;
+        border-top: 1px solid ${TextLightColor};
+        font-style: italic;
+
+        margin-top: ${spacing(3)};
+        padding-top: ${spacing(3)};
+        padding-bottom: ${spacing(3)};
+    }
+
+    p {
+        line-height: 1.5;
+        margin-bottom: ${spacing(6)};
     }
 `;
 

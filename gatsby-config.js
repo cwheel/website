@@ -27,6 +27,17 @@ module.exports = {
             resolve: 'gatsby-transformer-remark',
             options: {
                 footnotes: false,
+                plugins: [
+                    {
+                      resolve: `gatsby-remark-images`,
+                      options: {
+                        maxWidth: 800,
+                        maxHeight: 650,
+                        showCaptions: true,
+                        withWebp: true,
+                      },
+                    },
+                ],
             },
         },
         {
