@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import { animated, useSpring, useSprings, config } from 'react-spring';
+import { PrimaryColor, TextColor } from './ui/util/colors';
+import { animated, config, useSpring, useSprings } from 'react-spring';
 import { spacing, spacingMixin } from '../components/ui/util/spacing';
 
 import { FlexContainer } from '../components/ui/flex';
-import { PrimaryColor, TextColor } from './ui/util/colors';
-import styled from '@emotion/styled';
 import Name from './Name';
+import styled from '@emotion/styled';
 
 const NavigationWrapper = styled(animated.nav)`
     background: white;
@@ -14,7 +14,7 @@ const NavigationWrapper = styled(animated.nav)`
     height: 100%;
     width: 100%;
 
-    box-shadow: 0 ${spacing(-1)} ${spacing(6)} rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 ${spacing(-1)} ${spacing(6)} rgba(0, 0, 0, 0.5);
 
     position: fixed;
 
@@ -47,7 +47,8 @@ const CloseButtonPart = styled.div`
     width: 3px;
     background: ${TextColor};
 
-    transform: rotate(${({ left }) => left && '-'}45deg) translate(8px, ${({ right }) => right && '-'}8px);
+    transform: rotate(${({ left }) => left && '-'}45deg)
+        translate(8px, ${({ right }) => right && '-'}8px);
     border-radius: 3px;
     position: absolute;
 `;
@@ -62,11 +63,11 @@ const CloseButtonWrapper = styled.div`
 
 const CloseButton = ({ onClick }) => {
     return (
-        <CloseButtonWrapper onClick={onClick} role='button'>
+        <CloseButtonWrapper onClick={onClick} role="button">
             <CloseButtonPart right />
             <CloseButtonPart left />
         </CloseButtonWrapper>
-    )
+    );
 };
 
 const FullScreenNavigation = ({ links, children }) => {
@@ -74,7 +75,7 @@ const FullScreenNavigation = ({ links, children }) => {
 
     const [fsMenuLinksSprings, fsMenuLinkAnimation] = useSprings(
         links.length,
-        i => ({ opacity: 0 })
+        (i) => ({ opacity: 0 })
     );
 
     const transformSpring = useSpring({
@@ -91,7 +92,7 @@ const FullScreenNavigation = ({ links, children }) => {
     const showMenu = () => {
         setMenuVisible(true);
 
-        fsMenuLinkAnimation.start(i => ({
+        fsMenuLinkAnimation.start((i) => ({
             opacity: 1,
             delay: (i + 1) * 100,
         }));
@@ -100,7 +101,7 @@ const FullScreenNavigation = ({ links, children }) => {
     const hideMenu = () => {
         setMenuVisible(false);
 
-        fsMenuLinkAnimation.start(i => ({
+        fsMenuLinkAnimation.start((i) => ({
             opacity: 0,
         }));
     };
@@ -111,15 +112,29 @@ const FullScreenNavigation = ({ links, children }) => {
 
     return (
         <>
-            <NavigationWrapper style={{...transformSpring , ...opacitySpring}}>
+            <NavigationWrapper style={{ ...transformSpring, ...opacitySpring }}>
                 <NavigationHeader>
                     <Name dark={true} />
-                    <FlexContainer fullWidth fullHeight verticalCenter alignRight marginRight={5}>
+                    <FlexContainer
+                        fullWidth
+                        fullHeight
+                        verticalCenter
+                        alignRight
+                        marginRight={5}
+                    >
                         <CloseButton onClick={hideMenu} />
                     </FlexContainer>
                 </NavigationHeader>
 
-                {links.map(({ title, href, target }, i) => (<NavigationLink href={href} target={target} style={fsMenuLinksSprings[i]}>{title}</NavigationLink>))}
+                {links.map(({ title, href, target }, i) => (
+                    <NavigationLink
+                        href={href}
+                        target={target}
+                        style={fsMenuLinksSprings[i]}
+                    >
+                        {title}
+                    </NavigationLink>
+                ))}
             </NavigationWrapper>
         </>
     );

@@ -2,9 +2,9 @@ import * as React from 'react';
 
 import { animated, useSpring } from 'react-spring';
 
+import { isMobile } from '../util/mobile';
 import { spacingMixin } from './ui/util/spacing';
 import styled from '@emotion/styled';
-import { isMobile } from '../util/mobile';
 
 const NameTag = styled(animated.span)`
     z-index: 2;
@@ -30,7 +30,12 @@ const Name = ({ dark }) => {
 
     return (
         <a href="/">
-            <NameTag marginLeft={mobile ? 5 : 15} marginTop={mobile ? 4 : 8} style={darkSpring} mobile={mobile}>
+            <NameTag
+                marginLeft={mobile ? 5 : 15}
+                marginTop={mobile ? 4 : 8}
+                style={darkSpring}
+                mobile={mobile}
+            >
                 cwheeler
             </NameTag>
         </a>

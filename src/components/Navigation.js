@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import { animated, useSpring, useSprings, config } from 'react-spring';
+import { PrimaryColor, TextColor } from './ui/util/colors';
+import { animated, config, useSpring, useSprings } from 'react-spring';
 import { spacing, spacingMixin } from '../components/ui/util/spacing';
 
 import { FlexContainer } from '../components/ui/flex';
-import { PrimaryColor, TextColor } from './ui/util/colors';
-import styled from '@emotion/styled';
-import { isMobile } from '../util/mobile';
 import FullScreenNavigation from './FullScreenNavigation';
+import { isMobile } from '../util/mobile';
+import styled from '@emotion/styled';
 
 const links = [
     { title: 'GitHub', href: 'https://github.com/cwheel', target: '_blank' },
@@ -68,7 +68,7 @@ const HamburgerButton = ({ dark, onClick }) => {
             <HamburgerLayer dark={dark} />
             <HamburgerLayer dark={dark} />
         </div>
-    )
+    );
 };
 
 const Navigation = ({ dark }) => {
@@ -82,22 +82,29 @@ const Navigation = ({ dark }) => {
         <>
             <NavigationContainer absolute fullWidth alignRight>
                 <NavigationLinks>
-                    {isMobile() ? <HamburgerButton dark={dark} onClick={() => showFsMenu?.current()} /> : links.map(({ title, href, target }) => (
-                        <NavigationLink
-                            marginLeft={8}
-                            href={href}
-                            target={target}
-                            style={darkSpring}
+                    {isMobile() ? (
+                        <HamburgerButton
                             dark={dark}
-                        >
-                            {title}
-                        </NavigationLink>
-                    ))}
+                            onClick={() => showFsMenu?.current()}
+                        />
+                    ) : (
+                        links.map(({ title, href, target }) => (
+                            <NavigationLink
+                                marginLeft={8}
+                                href={href}
+                                target={target}
+                                style={darkSpring}
+                                dark={dark}
+                            >
+                                {title}
+                            </NavigationLink>
+                        ))
+                    )}
                 </NavigationLinks>
             </NavigationContainer>
-            
+
             <FullScreenNavigation links={links}>
-                {(showMenu) => showFsMenu.current = showMenu}
+                {(showMenu) => (showFsMenu.current = showMenu)}
             </FullScreenNavigation>
         </>
     );
