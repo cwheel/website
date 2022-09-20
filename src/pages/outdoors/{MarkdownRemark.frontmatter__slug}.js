@@ -20,6 +20,10 @@ const HeroImage = styled(GatsbyImage)`
 const Content = styled.article`
     font-size: large;
     color: ${TextColor};
+    
+    @media (prefers-color-scheme: dark) {
+        color: white;
+    }
 
     h1,
     h2,
@@ -71,6 +75,7 @@ export default function Template({ data }) {
     const {
         frontmatter: { name, location, images },
         html,
+        excerpt,
     } = markdownRemark;
 
     const heroRef = React.createRef();
@@ -86,6 +91,19 @@ export default function Template({ data }) {
                     }
                 />
 
+                <meta
+                    property="og:description"
+                    content={excerpt}
+                />
+
+                <meta
+                    property="og:title"
+                    content={name}
+                />
+
+                <meta name="description" content={excerpt} />
+                <meta name="author" content="Cameron Wheeler" />
+
                 <title>{name}</title>
             </Helmet>
 
@@ -96,7 +114,7 @@ export default function Template({ data }) {
             </div>
 
             <ContentWrapper>
-                <Title marginTop={15} marginBottom={5}>
+                <Title marginTop={15} marginBottom={15}>
                     {name}
                 </Title>
 
@@ -111,6 +129,7 @@ export const pageQuery = graphql`
     query ($id: String!) {
         markdownRemark(id: { eq: $id }) {
             html
+            excerpt(pruneLength: 300)
             frontmatter {
                 name
                 location

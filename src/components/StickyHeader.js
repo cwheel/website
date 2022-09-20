@@ -5,6 +5,7 @@ import { animated, config, useSpring } from 'react-spring';
 import Name from './Name';
 import Navigation from './Navigation';
 import styled from '@emotion/styled';
+import useDarkMode from './ui/util/colorScheme';
 
 const StickyHeaderWrapper = styled(animated.div)`
     position: fixed;
@@ -22,11 +23,13 @@ const StickyHeader = ({ heroRef }) => {
         !(document && document?.body?.scrollTop > 500)
     );
 
+    const darkMode = useDarkMode();
+
     const headerBackgroundSpring = useSpring({
-        background: heroVisible ? 'rgba(0,0,0,0)' : 'rgba(255,255,255,1)',
+        background: heroVisible ? 'rgba(0,0,0,0)' : (darkMode ? 'rgba(0,0,0,1)' : 'rgba(255,255,255,1)'),
         borderBottom: heroVisible
             ? 'solid 1px rgba(0,0,0,0)'
-            : 'solid 1px black',
+            : `solid 1px ${darkMode ? 'rgba(255,255,255,1)' : 'rgba(0,0,0,1)'}`,
     });
 
     React.useEffect(() => {
@@ -49,7 +52,7 @@ const StickyHeader = ({ heroRef }) => {
 
     return (
         <StickyHeaderWrapper style={headerBackgroundSpring}>
-            <Name dark={!heroVisible} />
+            <Name dark={!darkMode && !heroVisible} />
             <Navigation dark={!heroVisible} />
         </StickyHeaderWrapper>
     );

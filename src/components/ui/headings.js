@@ -8,6 +8,10 @@ const heading = ({ color, ...props }) => css`
     color: ${color || 'black'};
     margin: 0;
 
+    @media (prefers-color-scheme: dark) {
+        color: ${color || 'white'};
+    }
+
     ${spacingMixin(props)}
 `;
 

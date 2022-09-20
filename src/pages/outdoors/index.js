@@ -51,8 +51,8 @@ const Post = styled.a`
     margin-top: ${spacing(4)};
     color: ${TextColor};
 
-    detail {
-        color: red;
+    @media (prefers-color-scheme: dark) {
+        color: white;
     }
 `;
 
@@ -213,9 +213,10 @@ export default function Template({ data }) {
                                                         </H4>
                                                     </FlexUnit>
 
-                                                    <DeskopFlexUnit alignRight>
+                                                    <DeskopFlexUnit>
                                                         <FlexContainer
                                                             verticalCenter
+                                                            alignRight
                                                         >
                                                             <PostDetail>
                                                                 {
