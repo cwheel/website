@@ -1,10 +1,10 @@
 import * as React from 'react';
 
+import { FlexColumn, FlexContainer } from '../components/ui/flex';
 import { PrimaryColor, TextColor } from './ui/util/colors';
 import { animated, config, useSpring, useSprings } from 'react-spring';
 import { spacing, spacingMixin } from '../components/ui/util/spacing';
 
-import { FlexColumn, FlexContainer } from '../components/ui/flex';
 import FullScreenNavigation from './FullScreenNavigation';
 import styled from '@emotion/styled';
 

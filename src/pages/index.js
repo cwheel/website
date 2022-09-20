@@ -3,13 +3,13 @@ import '../global.css';
 import * as React from 'react';
 
 import { FlexContainer, VerticalCenter } from '../components/ui/flex';
-import { spacing } from '../components/ui/util/spacing';
 import { H1, H2, H3 } from '../components/ui/headings';
 import { PrimaryColor, SecondaryColor } from '../components/ui/util/colors';
 import { animated, config, useTransition } from 'react-spring';
 
 import Link from '../components/ui/link';
 import Navigation from '../components/Navigation';
+import { spacing } from '../components/ui/util/spacing';
 import styled from '@emotion/styled';
 
 const Page = styled.main`
@@ -36,11 +36,13 @@ const Highlight = styled.span`
 `;
 
 const ActivityH3 = styled(H3)`
-    ${'' /* display: flex;
+    ${
+        '' /* display: flex;
 
     @media only screen and (max-width: 980px) {
         flex-direction: column;
-    }; */}
+    }; */
+    }
 `;
 
 const activites = [
@@ -101,12 +103,10 @@ const IndexPage = () => {
                                     style={{
                                         ...style,
                                         'inline-size': 'max-content',
-                                        position: 'absolute',
+                                        'position': 'absolute',
                                     }}
                                 >
-                                    <Highlight>
-                                        {activites[activity]}
-                                    </Highlight>
+                                    <Highlight>{activites[activity]}</Highlight>
                                     .
                                 </animated.span>
                             ))}

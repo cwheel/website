@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 import { animated, useSpring } from 'react-spring';
+import { spacing, spacingMixin } from './ui/util/spacing';
 
-import { spacingMixin, spacing } from './ui/util/spacing';
 import styled from '@emotion/styled';
 
 const NameTag = styled(animated.span)`
@@ -33,11 +33,7 @@ const Name = ({ dark }) => {
 
     return (
         <a href="/">
-            <NameTag
-                style={darkSpring}
-            >
-                cwheeler
-            </NameTag>
+            <NameTag style={darkSpring}>cwheeler</NameTag>
         </a>
     );
 };
