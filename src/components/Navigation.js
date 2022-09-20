@@ -1,11 +1,13 @@
 import * as React from 'react';
 
-import { animated, useSpring } from 'react-spring';
+import { animated, useSpring, useSprings, config } from 'react-spring';
 import { spacing, spacingMixin } from '../components/ui/util/spacing';
 
 import { FlexContainer } from '../components/ui/flex';
-import { PrimaryColor } from './ui/util/colors';
+import { PrimaryColor, TextColor } from './ui/util/colors';
 import styled from '@emotion/styled';
+import { isMobile } from '../util/mobile';
+import FullScreenNavigation from './FullScreenNavigation';
 
 const links = [
     { title: 'GitHub', href: 'https://github.com/cwheel', target: '_blank' },
@@ -15,6 +17,11 @@ const links = [
 
 const NavigationContainer = styled(FlexContainer)`
     z-index: 1;
+    margin-top: ${spacing(8)};
+
+    @media only screen and (max-width: 600px) {
+        margin-top: ${spacing(4)};
+    }
 `;
 
 const NavigationLink = styled(animated.a)`
@@ -35,27 +42,64 @@ const NavigationLink = styled(animated.a)`
     ${spacingMixin}
 `;
 
+const NavigationLinks = styled.nav`
+    display: flex;
+    margin-right: ${spacing(15)};
+
+    @media only screen and (max-width: 600px) {
+        margin-right: ${spacing(4)};
+    }
+`;
+
+const HamburgerLayer = styled.div`
+    height: 3px;
+    width: ${spacing(5)};
+
+    border-radius: 2px;
+    margin-bottom: ${spacing(1)};
+
+    background: ${({ dark }) => (dark ? 'black' : 'white')};
+`;
+
+const HamburgerButton = ({ dark, onClick }) => {
+    return (
+        <div onClick={onClick}>
+            <HamburgerLayer dark={dark} />
+            <HamburgerLayer dark={dark} />
+            <HamburgerLayer dark={dark} />
+        </div>
+    )
+};
+
 const Navigation = ({ dark }) => {
+    const showFsMenu = React.useRef();
+
     const darkSpring = useSpring({
         color: dark ? PrimaryColor : 'white',
     });
 
     return (
-        <NavigationContainer absolute fullWidth alignRight marginTop={8}>
-            <FlexContainer marginRight={15}>
-                {links.map(({ title, href, target }) => (
-                    <NavigationLink
-                        marginLeft={8}
-                        href={href}
-                        target={target}
-                        style={darkSpring}
-                        dark={dark}
-                    >
-                        {title}
-                    </NavigationLink>
-                ))}
-            </FlexContainer>
-        </NavigationContainer>
+        <>
+            <NavigationContainer absolute fullWidth alignRight>
+                <NavigationLinks>
+                    {isMobile() ? <HamburgerButton dark={dark} onClick={() => showFsMenu?.current()} /> : links.map(({ title, href, target }) => (
+                        <NavigationLink
+                            marginLeft={8}
+                            href={href}
+                            target={target}
+                            style={darkSpring}
+                            dark={dark}
+                        >
+                            {title}
+                        </NavigationLink>
+                    ))}
+                </NavigationLinks>
+            </NavigationContainer>
+            
+            <FullScreenNavigation links={links}>
+                {(showMenu) => showFsMenu.current = showMenu}
+            </FullScreenNavigation>
+        </>
     );
 };
 

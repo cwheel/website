@@ -3,12 +3,12 @@ import '../../global.css';
 import * as React from 'react';
 
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { TextColor, TextLightColor } from '../../components/ui/util/colors';
 
 import { FlexColumn } from '../../components/ui/flex';
 import { H1 } from '../../components/ui/headings';
 import { Helmet } from 'react-helmet';
 import StickyHeader from '../../components/StickyHeader';
-import { TextColor, TextLightColor } from '../../components/ui/util/colors';
 import { graphql } from 'gatsby';
 import { spacing } from '../../components/ui/util/spacing';
 import styled from '@emotion/styled';
@@ -52,8 +52,13 @@ const Content = styled.p`
 `;
 
 const ContentWrapper = styled(FlexColumn)`
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 11%;
+    margin-right: 11%;
+
+    @media only screen and (max-width: 600px) {
+        margin-left: 8%;
+        margin-right: 8%;
+    }
 `;
 
 const Title = styled(H1)`

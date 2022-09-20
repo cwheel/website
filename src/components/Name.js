@@ -4,6 +4,7 @@ import { animated, useSpring } from 'react-spring';
 
 import { spacingMixin } from './ui/util/spacing';
 import styled from '@emotion/styled';
+import { isMobile } from '../util/mobile';
 
 const NameTag = styled(animated.span)`
     z-index: 2;
@@ -13,6 +14,10 @@ const NameTag = styled(animated.span)`
     font-size: 32px;
     color: white;
 
+    @media only screen and (max-width: 600px) {
+        font-size: 15px;
+    }
+
     ${spacingMixin}
 `;
 
@@ -21,9 +26,11 @@ const Name = ({ dark }) => {
         color: dark ? 'black' : 'white',
     });
 
+    const mobile = isMobile();
+
     return (
         <a href="/">
-            <NameTag marginLeft={15} marginTop={8} style={darkSpring}>
+            <NameTag marginLeft={mobile ? 5 : 15} marginTop={mobile ? 4 : 8} style={darkSpring} mobile={mobile}>
                 cwheeler
             </NameTag>
         </a>

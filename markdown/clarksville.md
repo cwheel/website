@@ -17,7 +17,7 @@ After being generously granted permission to dive from the Clarksville preserve 
 
 Clarksville Cave is a generously sized horizontal cave (for the Northeast) and permits upright walking for the majority of the 1000ft walk to the Lake Room. Some lower sections require duck-walking through waist deep water, but these sections are fairly short.
 
-![Map up to the Lake Room](../static/images/clarksville/map_to.png)
+![Map up to the Lake Room - roughly 1000ft from the Ward enterance to the Lake Room](../static/images/clarksville/map_to.png)
 
 ## The First Attempt
 

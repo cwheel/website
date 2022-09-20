@@ -11,6 +11,10 @@ const StickyHeaderWrapper = styled(animated.div)`
     width: 100%;
     height: 120px;
     z-index: 10;
+
+    @media only screen and (max-width: 600px) {
+        height: 60px;
+    }
 `;
 
 const StickyHeader = ({ heroRef }) => {

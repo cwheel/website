@@ -14,6 +14,10 @@ const heading = ({ color, ...props }) => css`
 const H1 = styled.h1`
     ${heading}
     font-size: ${spacing(15)};
+
+    @media only screen and (max-width: 600px) {
+        font-size: ${spacing(8)};
+    }
 `;
 
 const H2 = styled.h2`

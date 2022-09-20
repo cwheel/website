@@ -17,6 +17,10 @@ import styled from '@emotion/styled';
 const Hero = styled.div`
     position: relative;
     height: 500px;
+
+    @media only screen and (max-width: 600px) {
+        height: 275px;
+    }
 `;
 
 const HeroTitle = styled(H1)`

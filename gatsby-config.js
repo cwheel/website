@@ -29,13 +29,13 @@ module.exports = {
                 footnotes: false,
                 plugins: [
                     {
-                      resolve: `gatsby-remark-images`,
-                      options: {
-                        maxWidth: 800,
-                        maxHeight: 650,
-                        showCaptions: true,
-                        withWebp: true,
-                      },
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 800,
+                            maxHeight: 650,
+                            showCaptions: true,
+                            withWebp: true,
+                        },
                     },
                 ],
             },
