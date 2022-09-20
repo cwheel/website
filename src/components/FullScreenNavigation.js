@@ -26,7 +26,7 @@ const NavigationHeader = styled.div`
     width: 100%;
     border-bottom: solid 1px ${TextColor};
 
-    height: 60px;
+    height: ${spacing(12)};
 `;
 
 const NavigationLink = styled(animated.a)`
@@ -94,7 +94,7 @@ const FullScreenNavigation = ({ links, children }) => {
 
         fsMenuLinkAnimation.start((i) => ({
             opacity: 1,
-            delay: (i + 1) * 100,
+            delay: (i + 1) * 150,
         }));
     };
 
@@ -131,6 +131,7 @@ const FullScreenNavigation = ({ links, children }) => {
                         href={href}
                         target={target}
                         style={fsMenuLinksSprings[i]}
+                        key={title}
                     >
                         {title}
                     </NavigationLink>

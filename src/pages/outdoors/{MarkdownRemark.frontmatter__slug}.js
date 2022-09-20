@@ -17,7 +17,7 @@ const HeroImage = styled(GatsbyImage)`
     max-height: 500px;
 `;
 
-const Content = styled.p`
+const Content = styled.article`
     font-size: large;
     color: ${TextColor};
 
@@ -69,7 +69,7 @@ const Title = styled(H1)`
 export default function Template({ data }) {
     const { markdownRemark } = data;
     const {
-        frontmatter: { name, images },
+        frontmatter: { name, location, images },
         html,
     } = markdownRemark;
 
@@ -99,6 +99,8 @@ export default function Template({ data }) {
                 <Title marginTop={15} marginBottom={5}>
                     {name}
                 </Title>
+
+                <i>{location}</i>
                 <Content dangerouslySetInnerHTML={{ __html: html }}></Content>
             </ContentWrapper>
         </>
@@ -111,6 +113,7 @@ export const pageQuery = graphql`
             html
             frontmatter {
                 name
+                location
                 images {
                     childImageSharp {
                         gatsbyImageData

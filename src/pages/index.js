@@ -3,6 +3,7 @@ import '../global.css';
 import * as React from 'react';
 
 import { FlexContainer, VerticalCenter } from '../components/ui/flex';
+import { spacing } from '../components/ui/util/spacing';
 import { H1, H2, H3 } from '../components/ui/headings';
 import { PrimaryColor, SecondaryColor } from '../components/ui/util/colors';
 import { animated, config, useTransition } from 'react-spring';
@@ -20,8 +21,26 @@ const Page = styled.main`
     font-family: Cocogoose Pro;
 `;
 
+const Content = styled(FlexContainer)`
+    padding-left: ${spacing(15)};
+    padding-right: ${spacing(15)};
+
+    @media only screen and (max-width: 600px) {
+        padding-left: ${spacing(5)};
+        padding-right: ${spacing(5)};
+    }
+`;
+
 const Highlight = styled.span`
     color: ${SecondaryColor};
+`;
+
+const ActivityH3 = styled(H3)`
+    ${'' /* display: flex;
+
+    @media only screen and (max-width: 980px) {
+        flex-direction: column;
+    }; */}
 `;
 
 const activites = [
@@ -59,43 +78,42 @@ const IndexPage = () => {
         <Page>
             <Navigation />
 
-            <FlexContainer fullWidth fullHeight marginLeft={15}>
-                <VerticalCenter>
-                    <div>
-                        <H1 color="white">Hello!</H1>
-                        <H2 color="white">
-                            I&rsquo;m <Highlight>Cameron Wheeler</Highlight>
-                        </H2>
-                        <H3 color="white">
-                            and I&rsquo;m a web performance Tech Lead{' '}
-                            <Link href="https://yelp.com">
-                                <Highlight>@Yelp</Highlight>
-                            </Link>
-                            .
-                        </H3>
-                        <H3 color="white" marginTop={10}>
-                            When I&rsquo;m not engineering, you&rsquo;ll find me
-                            &nbsp;
-                            <span style={{ position: 'relative' }}>
-                                {transitions((style, activity) => (
-                                    <animated.span
-                                        style={{
-                                            ...style,
-                                            width: '1000px',
-                                            position: 'absolute',
-                                        }}
-                                    >
-                                        <Highlight>
-                                            {activites[activity]}
-                                        </Highlight>
-                                        .
-                                    </animated.span>
-                                ))}
-                            </span>
-                        </H3>
-                    </div>
-                </VerticalCenter>
-            </FlexContainer>
+            <Content fullHeight verticalCenter>
+                <div>
+                    <H1 color="white">Hello!</H1>
+                    <H2 color="white">
+                        I&rsquo;m <Highlight>Cameron Wheeler</Highlight>
+                    </H2>
+                    <H3 color="white">
+                        and I&rsquo;m a web performance Tech Lead{' '}
+                        <Link href="https://yelp.com">
+                            <Highlight>@Yelp</Highlight>
+                        </Link>
+                        .
+                    </H3>
+
+                    <ActivityH3 color="white" marginTop={10}>
+                        When I&rsquo;m not engineering, you&rsquo;ll find me
+                        &nbsp;
+                        <span style={{ position: 'relative' }}>
+                            {transitions((style, activity) => (
+                                <animated.span
+                                    style={{
+                                        ...style,
+                                        'inline-size': 'max-content',
+                                        position: 'absolute',
+                                    }}
+                                >
+                                    <Highlight>
+                                        {activites[activity]}
+                                    </Highlight>
+                                    .
+                                </animated.span>
+                            ))}
+                        </span>
+                    </ActivityH3>
+                </div>
+            </Content>
         </Page>
     );
 };

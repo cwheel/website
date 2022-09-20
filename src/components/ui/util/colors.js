@@ -1,5 +1,5 @@
-const PrimaryColor = '#1a387a';
-const SecondaryColor = '#ffc920';
+const PrimaryColor = '#4700ff';
+const SecondaryColor = '#dcff00';
 const TextColor = '#383838';
 const TextLightColor = '#b5b5b5';
 

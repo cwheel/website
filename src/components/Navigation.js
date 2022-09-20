@@ -4,9 +4,8 @@ import { PrimaryColor, TextColor } from './ui/util/colors';
 import { animated, config, useSpring, useSprings } from 'react-spring';
 import { spacing, spacingMixin } from '../components/ui/util/spacing';
 
-import { FlexContainer } from '../components/ui/flex';
+import { FlexColumn, FlexContainer } from '../components/ui/flex';
 import FullScreenNavigation from './FullScreenNavigation';
-import { isMobile } from '../util/mobile';
 import styled from '@emotion/styled';
 
 const links = [
@@ -44,10 +43,12 @@ const NavigationLink = styled(animated.a)`
 
 const NavigationLinks = styled.nav`
     display: flex;
-    margin-right: ${spacing(15)};
 
-    @media only screen and (max-width: 600px) {
+    visibility: visible;
+
+    @media only screen and (max-width: 980px) {
         margin-right: ${spacing(4)};
+        visibility: hidden;
     }
 `;
 
@@ -61,13 +62,21 @@ const HamburgerLayer = styled.div`
     background: ${({ dark }) => (dark ? 'black' : 'white')};
 `;
 
+const HamburgerButtonWrapper = styled(FlexColumn)`
+    visibility: hidden;
+
+    @media only screen and (max-width: 980px) {
+        visibility: visible;
+    }
+`;
+
 const HamburgerButton = ({ dark, onClick }) => {
     return (
-        <div onClick={onClick}>
+        <HamburgerButtonWrapper onClick={onClick} marginRight={5}>
             <HamburgerLayer dark={dark} />
             <HamburgerLayer dark={dark} />
             <HamburgerLayer dark={dark} />
-        </div>
+        </HamburgerButtonWrapper>
     );
 };
 
@@ -81,25 +90,24 @@ const Navigation = ({ dark }) => {
     return (
         <>
             <NavigationContainer absolute fullWidth alignRight>
+                <HamburgerButton
+                    dark={dark}
+                    onClick={() => showFsMenu?.current()}
+                />
+
                 <NavigationLinks>
-                    {isMobile() ? (
-                        <HamburgerButton
+                    {links.map(({ title, href, target }) => (
+                        <NavigationLink
+                            marginLeft={8}
+                            href={href}
+                            target={target}
+                            style={darkSpring}
                             dark={dark}
-                            onClick={() => showFsMenu?.current()}
-                        />
-                    ) : (
-                        links.map(({ title, href, target }) => (
-                            <NavigationLink
-                                marginLeft={8}
-                                href={href}
-                                target={target}
-                                style={darkSpring}
-                                dark={dark}
-                            >
-                                {title}
-                            </NavigationLink>
-                        ))
-                    )}
+                            key={title}
+                        >
+                            {title}
+                        </NavigationLink>
+                    ))}
                 </NavigationLinks>
             </NavigationContainer>
 

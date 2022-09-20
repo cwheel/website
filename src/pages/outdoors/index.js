@@ -26,6 +26,10 @@ const Hero = styled.div`
 const HeroTitle = styled(H1)`
     opacity: 0.75;
     font-size: ${spacing(5)};
+
+    @media only screen and (max-width: 600px) {
+        font-size: ${spacing(4)};
+    }
 `;
 
 const Location = styled.span`
@@ -49,6 +53,14 @@ const Post = styled.a`
 
     detail {
         color: red;
+    }
+`;
+
+const DeskopFlexUnit = styled(FlexUnit)`
+    display: initial;
+
+    @media only screen and (max-width: 600px) {
+        display: none;
     }
 `;
 
@@ -201,7 +213,7 @@ export default function Template({ data }) {
                                                         </H4>
                                                     </FlexUnit>
 
-                                                    <FlexUnit alignRight>
+                                                    <DeskopFlexUnit alignRight>
                                                         <FlexContainer
                                                             verticalCenter
                                                         >
@@ -213,7 +225,7 @@ export default function Template({ data }) {
                                                                 }
                                                             </PostDetail>
                                                         </FlexContainer>
-                                                    </FlexUnit>
+                                                    </DeskopFlexUnit>
                                                 </FlexContainer>
 
                                                 <PostDetail>

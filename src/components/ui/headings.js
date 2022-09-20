@@ -23,26 +23,46 @@ const H1 = styled.h1`
 const H2 = styled.h2`
     ${heading}
     font-size: ${spacing(11)};
+
+    @media only screen and (max-width: 600px) {
+        font-size: ${spacing(5)};
+    }
 `;
 
 const H3 = styled.h3`
     ${heading}
     font-size: ${spacing(5)};
+
+    @media only screen and (max-width: 600px) {
+        font-size: ${spacing(3)};
+    }
 `;
 
 const H4 = styled.h4`
     ${heading}
     font-size: ${spacing(4)};
+
+    @media only screen and (max-width: 600px) {
+        font-size: ${spacing(3)};
+    }
 `;
 
 const H5 = styled.h5`
     ${heading}
     font-size: ${spacing(3)};
+
+    @media only screen and (max-width: 600px) {
+        font-size: ${spacing(2)};
+    }
 `;
 
 const H6 = styled.h6`
     ${heading}
     font-size: ${spacing(2)};
+
+    @media only screen and (max-width: 600px) {
+        font-size: ${spacing(1)};
+    }
 `;
 
 export { H1, H2, H3, H4, H5, H6 };

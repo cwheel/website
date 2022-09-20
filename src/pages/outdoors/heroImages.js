@@ -4,8 +4,12 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { css } from '@emotion/react';
 
 const HeroImage = css`
-    max-height: 500px;
     filter: grayscale() brightness(0.75);
+    height: 500px;
+
+    @media only screen and (max-width: 600px) {
+        height: 275px;
+    }
 `;
 
 const heroImages = [
