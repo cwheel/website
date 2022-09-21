@@ -17,7 +17,7 @@ const heroImages = [
         image: (
             <StaticImage
                 alt="hero1"
-                src="../../../static/images/outdoors/hero1.jpg"
+                src="../../static/images/outdoors/hero1.jpg"
                 css={HeroImage}
             />
         ),
@@ -27,7 +27,7 @@ const heroImages = [
         image: (
             <StaticImage
                 alt="hero2"
-                src="../../../static/images/outdoors/hero2.jpg"
+                src="../../static/images/outdoors/hero2.jpg"
                 css={HeroImage}
             />
         ),
@@ -37,7 +37,7 @@ const heroImages = [
         image: (
             <StaticImage
                 alt="hero3"
-                src="../../../static/images/outdoors/hero3.jpg"
+                src="../../static/images/outdoors/hero3.jpg"
                 css={HeroImage}
             />
         ),
@@ -47,7 +47,7 @@ const heroImages = [
         image: (
             <StaticImage
                 alt="hero4"
-                src="../../../static/images/outdoors/hero4.jpg"
+                src="../../static/images/outdoors/hero4.jpg"
                 css={HeroImage}
             />
         ),
@@ -57,7 +57,7 @@ const heroImages = [
         image: (
             <StaticImage
                 alt="hero5"
-                src="../../../static/images/outdoors/hero5.jpg"
+                src="../../static/images/outdoors/hero5.jpg"
                 css={HeroImage}
             />
         ),
@@ -67,7 +67,7 @@ const heroImages = [
         image: (
             <StaticImage
                 alt="hero6"
-                src="../../../static/images/outdoors/hero6.jpg"
+                src="../../static/images/outdoors/hero6.jpg"
                 css={HeroImage}
             />
         ),
@@ -77,7 +77,7 @@ const heroImages = [
         image: (
             <StaticImage
                 alt="hero7"
-                src="../../../static/images/outdoors/hero7.jpg"
+                src="../../static/images/outdoors/hero7.jpg"
                 css={HeroImage}
             />
         ),
@@ -87,7 +87,7 @@ const heroImages = [
         image: (
             <StaticImage
                 alt="hero8"
-                src="../../../static/images/outdoors/hero8.jpg"
+                src="../../static/images/outdoors/hero8.jpg"
                 css={HeroImage}
             />
         ),

@@ -10,7 +10,7 @@ import { animated, config, useTransition } from 'react-spring';
 import { Helmet } from 'react-helmet';
 import StickyHeader from '../../components/StickyHeader';
 import { graphql } from 'gatsby';
-import heroImages from './heroImages';
+import heroImages from '../../util/outdoorsHeros';
 import { spacing } from '../../components/ui/util/spacing';
 import styled from '@emotion/styled';
 

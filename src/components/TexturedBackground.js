@@ -1,7 +1,7 @@
+import { animated, config, useSprings } from 'react-spring';
+
 import React from 'react';
 import styled from '@emotion/styled';
-
-import { animated, config, useSprings } from 'react-spring';
 
 const Wrapper = styled.div`
     position: absolute;
@@ -21,20 +21,29 @@ const Pill = styled(animated.div)`
 const start = () => Math.random() * window.innerHeight;
 
 const TexturedBackground = () => {
-    const [springs, springApi] = useSprings(
-        10,
-        () => ({ opacity: 0, top: start(), left: 0, loop: true })
-    );
+    const [springs, springApi] = useSprings(10, () => ({
+        opacity: 0,
+        top: start(),
+        left: 0,
+        loop: true,
+    }));
 
     React.useEffect(() => {
-        springApi.start(i => ({ opacity: 1, left: window.innerWidth + 200, loop: true, config: { friction: 50 + Math.random() * 50 } }));
+        springApi.start((i) => ({
+            opacity: 1,
+            left: window.innerWidth + 200,
+            loop: true,
+            config: { friction: 50 + Math.random() * 50 },
+        }));
     }, []);
 
     return (
         <Wrapper>
-            {springs.map(style => <Pill style={style} />)}
+            {springs.map((style) => (
+                <Pill style={style} />
+            ))}
         </Wrapper>
-    )
+    );
 };
 
 export default TexturedBackground;

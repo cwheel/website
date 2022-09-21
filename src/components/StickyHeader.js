@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { animated, config, useSpring } from 'react-spring';
+import { animated, useSpring } from 'react-spring';
 
 import Name from './Name';
 import Navigation from './Navigation';
@@ -20,7 +20,7 @@ const StickyHeaderWrapper = styled(animated.div)`
 
 const StickyHeader = ({ heroRef }) => {
     const [heroVisible, setHeroVisible] = React.useState(
-        !(document && document?.body?.scrollTop > 500)
+        !(typeof document !== 'undefined' && document?.body?.scrollTop > 500)
     );
 
     const darkMode = useDarkMode();

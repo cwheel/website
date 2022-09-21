@@ -2,16 +2,16 @@ import '../global.css';
 
 import * as React from 'react';
 
-import { FlexContainer } from '../components/ui/flex';
 import { H1, H2, H3 } from '../components/ui/headings';
 import { PrimaryColor, SecondaryColor } from '../components/ui/util/colors';
 import { animated, config, useTransition } from 'react-spring';
 
+import { FlexContainer } from '../components/ui/flex';
 import Link from '../components/ui/link';
 import Navigation from '../components/Navigation';
+import TexturedBackground from '../components/TexturedBackground';
 import { spacing } from '../components/ui/util/spacing';
 import styled from '@emotion/styled';
-import TexturedBackground from '../components/TexturedBackground';
 
 const Page = styled.main`
     width: 100%;
@@ -36,24 +36,14 @@ const Highlight = styled.span`
     color: ${SecondaryColor};
 `;
 
-const ActivityH3 = styled(H3)`
-    ${
-        '' /* display: flex;
-
-    @media only screen and (max-width: 980px) {
-        flex-direction: column;
-    }; */
-    }
-`;
-
-const activites = [
+const activities = [
     'cave diving',
     'cross country mountain biking',
     'waterfall ice climbing',
     'caving',
     'backcountry skiing',
     'backpacking',
-    'brewing beer'
+    'brewing beer',
 ];
 
 const IndexPage = () => {
@@ -69,7 +59,7 @@ const IndexPage = () => {
     React.useEffect(() => {
         setTimeout(() => {
             setActivity((activity) => {
-                if (activity + 1 === activites.length) {
+                if (activity + 1 === activities.length) {
                     return 0;
                 } else {
                     return activity + 1;
@@ -97,7 +87,7 @@ const IndexPage = () => {
                         .
                     </H3>
 
-                    <ActivityH3 color="white" marginTop={10}>
+                    <H3 color="white" marginTop={10}>
                         When I&rsquo;m not engineering, you&rsquo;ll find me
                         &nbsp;
                         <span style={{ position: 'relative' }}>
@@ -109,12 +99,12 @@ const IndexPage = () => {
                                         'position': 'absolute',
                                     }}
                                 >
-                                    <Highlight>{activites[activity]}</Highlight>
+                                    <Highlight>{activities[activity]}</Highlight>
                                     .
                                 </animated.span>
                             ))}
                         </span>
-                    </ActivityH3>
+                    </H3>
                 </div>
             </Content>
         </Page>
