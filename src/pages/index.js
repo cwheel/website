@@ -99,7 +99,9 @@ const IndexPage = () => {
                                         'position': 'absolute',
                                     }}
                                 >
-                                    <Highlight>{activities[activity]}</Highlight>
+                                    <Highlight>
+                                        {activities[activity]}
+                                    </Highlight>
                                     .
                                 </animated.span>
                             ))}
