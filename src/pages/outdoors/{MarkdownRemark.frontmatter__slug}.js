@@ -20,7 +20,7 @@ const HeroImage = styled(GatsbyImage)`
 const Content = styled.article`
     font-size: large;
     color: ${TextColor};
-    
+
     @media (prefers-color-scheme: dark) {
         color: white;
     }
@@ -66,7 +66,7 @@ const ContentWrapper = styled(FlexColumn)`
 `;
 
 const Title = styled(H1)`
-    border-left: solid ${spacing(2)};
+    border-left: solid ${spacing(1.5)};
     padding-left: ${spacing(6)};
 `;
 
@@ -91,15 +91,9 @@ export default function Template({ data }) {
                     }
                 />
 
-                <meta
-                    property="og:description"
-                    content={excerpt}
-                />
+                <meta property="og:description" content={excerpt} />
 
-                <meta
-                    property="og:title"
-                    content={name}
-                />
+                <meta property="og:title" content={name} />
 
                 <meta name="description" content={excerpt} />
                 <meta name="author" content="Cameron Wheeler" />

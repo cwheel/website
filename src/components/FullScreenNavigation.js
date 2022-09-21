@@ -7,9 +7,15 @@ import { spacing, spacingMixin } from '../components/ui/util/spacing';
 import { FlexContainer } from '../components/ui/flex';
 import Name from './Name';
 import styled from '@emotion/styled';
+import useDarkMode from './ui/util/colorScheme';
 
 const NavigationWrapper = styled(animated.nav)`
     background: white;
+
+    @media (prefers-color-scheme: dark) {
+        background: black;
+    }
+
     z-index: 10;
     height: 100%;
     width: 100%;
@@ -51,6 +57,10 @@ const CloseButtonPart = styled.div`
         translate(8px, ${({ right }) => right && '-'}8px);
     border-radius: 3px;
     position: absolute;
+
+    @media (prefers-color-scheme: dark) {
+        background: white;
+    }
 `;
 
 const CloseButtonWrapper = styled.div`
@@ -58,7 +68,7 @@ const CloseButtonWrapper = styled.div`
     height: ${spacing(5)};
     width: ${spacing(5)};
 
-    margin-right: ${spacing(2)};
+    margin-right: ${spacing(4)};
 `;
 
 const CloseButton = ({ onClick }) => {
@@ -72,6 +82,7 @@ const CloseButton = ({ onClick }) => {
 
 const FullScreenNavigation = ({ links, children }) => {
     const [menuVisible, setMenuVisible] = React.useState(false);
+    const darkMode = useDarkMode();
 
     const [fsMenuLinksSprings, fsMenuLinkAnimation] = useSprings(
         links.length,
@@ -114,7 +125,7 @@ const FullScreenNavigation = ({ links, children }) => {
         <>
             <NavigationWrapper style={{ ...transformSpring, ...opacitySpring }}>
                 <NavigationHeader>
-                    <Name dark={true} />
+                    <Name dark={!darkMode} />
                     <FlexContainer
                         fullWidth
                         fullHeight

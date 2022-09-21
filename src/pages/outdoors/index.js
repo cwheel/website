@@ -34,7 +34,7 @@ const HeroTitle = styled(H1)`
 
 const Location = styled.span`
     position: absolute;
-    z-index: 10;
+    z-index: 8;
     bottom: ${spacing(4)};
     right: ${spacing(4)};
     color: white;
@@ -48,7 +48,7 @@ const HeroWrapper = styled(animated.div)`
 const Post = styled.a`
     text-decoration: none;
     border-top: 1px solid black;
-    margin-top: ${spacing(4)};
+    margin-top: ${spacing(3)};
     color: ${TextColor};
 
     @media (prefers-color-scheme: dark) {
@@ -89,6 +89,8 @@ const PostDetail = styled.span`
 
 const Month = styled(H3)`
     color: ${TextLightColor};
+    border-bottom: solid 1px white;
+    padding-bottom: 5px;
 `;
 
 const groupPosts = (nodes) => {

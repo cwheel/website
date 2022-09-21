@@ -7,6 +7,7 @@ import { spacing, spacingMixin } from '../components/ui/util/spacing';
 
 import FullScreenNavigation from './FullScreenNavigation';
 import styled from '@emotion/styled';
+import useDarkMode from './ui/util/colorScheme';
 
 const links = [
     { title: 'GitHub', href: 'https://github.com/cwheel', target: '_blank' },
@@ -82,6 +83,7 @@ const HamburgerButton = ({ dark, onClick }) => {
 
 const Navigation = ({ dark }) => {
     const showFsMenu = React.useRef();
+    const darkMode = useDarkMode();
 
     const darkSpring = useSpring({
         color: dark ? PrimaryColor : 'white',
@@ -91,7 +93,7 @@ const Navigation = ({ dark }) => {
         <>
             <NavigationContainer absolute fullWidth alignRight>
                 <HamburgerButton
-                    dark={dark}
+                    dark={!darkMode}
                     onClick={() => showFsMenu?.current()}
                 />
 

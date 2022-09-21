@@ -2,7 +2,7 @@ import '../global.css';
 
 import * as React from 'react';
 
-import { FlexContainer, VerticalCenter } from '../components/ui/flex';
+import { FlexContainer } from '../components/ui/flex';
 import { H1, H2, H3 } from '../components/ui/headings';
 import { PrimaryColor, SecondaryColor } from '../components/ui/util/colors';
 import { animated, config, useTransition } from 'react-spring';
@@ -11,6 +11,7 @@ import Link from '../components/ui/link';
 import Navigation from '../components/Navigation';
 import { spacing } from '../components/ui/util/spacing';
 import styled from '@emotion/styled';
+import TexturedBackground from '../components/TexturedBackground';
 
 const Page = styled.main`
     width: 100%;
@@ -49,9 +50,10 @@ const activites = [
     'cave diving',
     'cross country mountain biking',
     'waterfall ice climbing',
-    'exploring dry caves',
+    'caving',
     'backcountry skiing',
     'backpacking',
+    'brewing beer'
 ];
 
 const IndexPage = () => {
@@ -78,6 +80,7 @@ const IndexPage = () => {
 
     return (
         <Page>
+            {/* <TexturedBackground /> */}
             <Navigation />
 
             <Content fullHeight verticalCenter>

@@ -26,7 +26,11 @@ const StickyHeader = ({ heroRef }) => {
     const darkMode = useDarkMode();
 
     const headerBackgroundSpring = useSpring({
-        background: heroVisible ? 'rgba(0,0,0,0)' : (darkMode ? 'rgba(0,0,0,1)' : 'rgba(255,255,255,1)'),
+        background: heroVisible
+            ? 'rgba(0,0,0,0)'
+            : darkMode
+            ? 'rgba(0,0,0,1)'
+            : 'rgba(255,255,255,1)',
         borderBottom: heroVisible
             ? 'solid 1px rgba(0,0,0,0)'
             : `solid 1px ${darkMode ? 'rgba(255,255,255,1)' : 'rgba(0,0,0,1)'}`,
