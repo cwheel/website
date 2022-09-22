@@ -87,9 +87,10 @@ const HamburgerButton = ({ dark, onClick }) => {
 
 const Navigation = ({ dark }) => {
     const showFsMenu = React.useRef();
+    const darkMode = useDarkMode();
 
     const darkSpring = useSpring({
-        color: dark ? PrimaryColor : 'white',
+        color: dark ? (darkMode ? 'white' : PrimaryColor) : 'white',
     });
 
     return (
