@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        siteUrl: `https://www.yourdomain.tld`,
+        siteUrl: `https://cwheeler.dev`,
     },
     plugins: [
         'gatsby-plugin-emotion',
@@ -49,14 +49,14 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
-              name: 'Cameron Wheeler',
-              short_name: 'cwheeler',
-              start_url: '/',
-              background_color: '#4700ff',
-              theme_color: '#4700ff',
-              display: 'standalone',
-              icon: 'static/fav.png',
-            }
+                name: 'Cameron Wheeler',
+                short_name: 'cwheeler',
+                start_url: '/',
+                background_color: '#4700ff',
+                theme_color: '#4700ff',
+                display: 'standalone',
+                icon: 'static/fav.png',
+            },
         },
-    ]
+    ],
 };
