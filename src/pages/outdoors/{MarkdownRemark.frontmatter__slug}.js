@@ -53,6 +53,8 @@ const Content = styled.article`
         line-height: 1.5;
         margin-bottom: ${spacing(6)};
     }
+
+    margin-bottom: 25px;
 `;
 
 const ContentWrapper = styled(FlexColumn)`
