@@ -61,6 +61,10 @@ const HamburgerLayer = styled.div`
     margin-bottom: ${spacing(1)};
 
     background: ${({ dark }) => (dark ? 'black' : 'white')};
+
+    @media (prefers-color-scheme: dark) {
+        background: white;
+    }
 `;
 
 const HamburgerButtonWrapper = styled(FlexColumn)`
@@ -83,7 +87,6 @@ const HamburgerButton = ({ dark, onClick }) => {
 
 const Navigation = ({ dark }) => {
     const showFsMenu = React.useRef();
-    const darkMode = useDarkMode();
 
     const darkSpring = useSpring({
         color: dark ? PrimaryColor : 'white',
@@ -93,7 +96,7 @@ const Navigation = ({ dark }) => {
         <>
             <NavigationContainer absolute fullWidth alignRight>
                 <HamburgerButton
-                    dark={!darkMode}
+                    dark={dark}
                     onClick={() => showFsMenu?.current()}
                 />
 

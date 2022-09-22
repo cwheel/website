@@ -53,7 +53,6 @@ module.exports = {
                 short_name: 'cwheeler',
                 start_url: '/',
                 background_color: '#4700ff',
-                theme_color: '#4700ff',
                 display: 'standalone',
                 icon: 'static/fav.png',
             },

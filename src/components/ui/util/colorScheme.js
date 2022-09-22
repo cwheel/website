@@ -1,3 +1,5 @@
+import React from 'react';
+
 const useDarkMode = () =>
     typeof window !== 'undefined' &&
     window.matchMedia &&
