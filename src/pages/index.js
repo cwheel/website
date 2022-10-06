@@ -36,9 +36,18 @@ const Highlight = styled.span`
     color: ${SecondaryColor};
 `;
 
+const Activity = styled.span`
+    // Safari hack :(
+    @supports selector(:nth-child(1 of x)) {
+        margin-left: -7px;
+    }
+
+    position: relative;
+`;
+
 const activities = [
     'cave diving',
-    'cross country mountain biking',
+    'mountain biking',
     'waterfall ice climbing',
     'caving',
     'backcountry skiing',
@@ -90,7 +99,7 @@ const IndexPage = () => {
                     <H3 color="white" marginTop={10}>
                         When I&rsquo;m not engineering, you&rsquo;ll find me
                         &nbsp;
-                        <span style={{ position: 'relative' }}>
+                        <Activity>
                             {transitions((style, activity) => (
                                 <animated.span
                                     style={{
@@ -105,7 +114,7 @@ const IndexPage = () => {
                                     .
                                 </animated.span>
                             ))}
-                        </span>
+                        </Activity>
                     </H3>
                 </div>
             </Content>
