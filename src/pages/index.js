@@ -39,7 +39,7 @@ const Highlight = styled.span`
 const Activity = styled.span`
     // Safari hack :(
     @supports selector(:nth-child(1 of x)) {
-        margin-left: -4px;
+        margin-left: -3px;
     }
 
     position: relative;
@@ -49,7 +49,7 @@ const activities = [
     'cave diving',
     'mountain biking',
     'waterfall ice climbing',
-    'caving',
+    'dry caving',
     'backcountry skiing',
     'backpacking',
     'brewing beer',
