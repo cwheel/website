@@ -39,7 +39,7 @@ const Highlight = styled.span`
 const Activity = styled.span`
     // Safari hack :(
     @supports selector(:nth-child(1 of x)) {
-        margin-left: -7px;
+        margin-left: -4px;
     }
 
     position: relative;
